@@ -13,10 +13,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      About | SARIAY-Blog
+      About | Jake&#39;Blog
     
   </title>
-  <meta name="author" content="Sariay">
+  <meta name="author" content="Jake">
   <meta name="keywords" content="" />
   <meta name="description" content="" />
 	<!-- favicon -->
@@ -43,9 +43,9 @@
     }
 	
     const CONFIG_LEACLOUD_COUNT = {
-      enable: false,
-	  appId: 'AU8...',
-	  appKey: '4cU...',
+      enable: true,
+	  appId: 'mqBYiWmeh7S3m55DJwitYGxF-gzGzoHsz',
+	  appKey: 'h2zCa8cC9XeGRc6D23VP7x5J',
 	  serverURLs: 'http' || ' '
     }
   </script>
@@ -222,37 +222,67 @@
 			
 		<!--main-->
 		<main>
-			<!--content start-->
-<div class="layout-page">	
-	<div class="layout-page-container">
-
-		<div class="layout-page-header">
-
+			<div class="layout-about">
+	<ul id="global-social">
 	
-
-		About
-
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
 	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
 	
-</div>
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
 
 		
-
-			<div>
-				<p>|</p>
-<p>|</p>
-<p>|</p>
-<p>在这里写写我是谁，以及这里记录了什么。</p>
+	<div class="about-content">
+		<p>在这里写写我是谁，以及这里记录了什么。</p>
 <p>最主要的是训练书面表达能力，其次是备忘和归档，如果也能帮助到你，那最好不过。</p>
 
-			</div>
-
-		
 	</div>
-
 	
 </div>
-
 		</main>
 
 		<!--footer-->
@@ -390,6 +420,11 @@
 -->
 
 
+  
+<script src="/plugin/leancloud/av-min.js"></script>
+<script src="/js/leancloud-count.js"></script>
+
+
 	
 
   
@@ -417,6 +452,21 @@
 		<div class="local-search-footer">
 			<div class="topN-post">				
 				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title= "热门文章"></div> 
+	</div>
+	
+    <script>
+        var limitCount = 10;
+        if( $('#topN').length ){
+            setTimeout(function() {
+                topNPost(limitCount);
+			}, 3000);
+        }
+    </script>
+   
 								
 			</div>
 		</div>

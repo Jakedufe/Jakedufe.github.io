@@ -13,10 +13,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      文章归档: 2020 | SARIAY-Blog
+      文章归档: 2020 | Jake&#39;Blog
     
   </title>
-  <meta name="author" content="Sariay">
+  <meta name="author" content="Jake">
   <meta name="keywords" content="" />
   <meta name="description" content="" />
 	<!-- favicon -->
@@ -43,9 +43,9 @@
     }
 	
     const CONFIG_LEACLOUD_COUNT = {
-      enable: false,
-	  appId: 'AU8...',
-	  appKey: '4cU...',
+      enable: true,
+	  appId: 'mqBYiWmeh7S3m55DJwitYGxF-gzGzoHsz',
+	  appKey: 'h2zCa8cC9XeGRc6D23VP7x5J',
 	  serverURLs: 'http' || ' '
     }
   </script>
@@ -269,6 +269,14 @@
                             Hello World
                         </span>
         			    
+                			<a href="/tags/%E8%AF%B4%E6%98%8E/" class="tag">
+                				说明
+                			</a>
+                        
+                			<a href="/tags/%E6%B5%8B%E8%AF%95/" class="tag">
+                				测试
+                			</a>
+                        
                     </a>
                 </li>
             
@@ -322,6 +330,14 @@
                         <span itemprop="name">
                             Hello World
                         </span>
+                        
+                            <a href="/tags/%E8%AF%B4%E6%98%8E/" class="tag">
+                                说明
+                            </a>
+                        
+                            <a href="/tags/%E6%B5%8B%E8%AF%95/" class="tag">
+                                测试
+                            </a>
                                
                     </a>
                 </li>
@@ -468,6 +484,11 @@
 -->
 
 
+  
+<script src="/plugin/leancloud/av-min.js"></script>
+<script src="/js/leancloud-count.js"></script>
+
+
 	
 
   
@@ -495,6 +516,21 @@
 		<div class="local-search-footer">
 			<div class="topN-post">				
 				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title= "热门文章"></div> 
+	</div>
+	
+    <script>
+        var limitCount = 10;
+        if( $('#topN').length ){
+            setTimeout(function() {
+                topNPost(limitCount);
+			}, 3000);
+        }
+    </script>
+   
 								
 			</div>
 		</div>
