@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Shell 基本命令 | Jake&#39;Blog
+      shell 命令2 | Jake&#39;Blog
     
   </title>
   <meta name="author" content="Jake">
@@ -102,7 +102,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「Shell 基本命令」
+			「shell 命令2」
 		
 	</p>
 
@@ -252,8 +252,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" itemprop="url">
-		Shell 基本命令
+	<a href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" itemprop="url">
+		shell 命令2
 	</a>
 
 		</div>
@@ -269,9 +269,9 @@
 
 	更新于
 
-	<a href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" itemprop="url">
-		<time datetime="2020-11-25T13:33:36.000Z" itemprop="dateUpdated">
-	  		2020-11-25
+	<a href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" itemprop="url">
+		<time datetime="2020-12-01T06:39:55.000Z" itemprop="dateUpdated">
+	  		2020-12-01
 	  </time>
 	</a> 
 
@@ -292,7 +292,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/_visitors" data-url="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-title="Shell 基本命令">
+    <span class="leancloud_visitors" id="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/_visitors" data-url="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" data-title="shell 命令2">
        	<i class="icon-eye"></i>
        	热度
         
@@ -304,7 +304,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/_likes" data-url="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-title="Shell 基本命令" rel="unlike">
+    <span class="leancloud_likes" id="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/_likes" data-url="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" data-title="shell 命令2" rel="unlike">
         <i class="icon-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -314,98 +314,161 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h2 id="基础命令小结"><a href="#基础命令小结" class="headerlink" title="基础命令小结"></a>基础命令小结</h2><h3 id="bash手册"><a href="#bash手册" class="headerlink" title="bash手册"></a>bash手册</h3><p>man命令用来访问存储在Linux系统上的手册页面。在想要查找的工具的名称前面输入man命令，就可以找到那个工具相应的手册条目。</p>
-<p>当使用man命令查看命令手册页的时候，这些手册页是由分页程序（pager）来显示的。分页程序是一种实用工具，能够逐页显示文本。可以通过点击空格键进行翻页，或是使用回车键逐行查看。另外还可以使用箭头键向前向后滚动手册页的内容。</p>
-<p>手册页将与命令相关的信息分成了不同的节。每一节惯用的命名标准如表3-1所示。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@c6a4475ed7822909a8a3a0450c8b895842a62d99/2020/11/25/242e041b54b4f35832be5dc0b1125d51.png" alt="image-20201125214147459"></p>
-<p>除了对节按照惯例进行命名，手册页还有对应的内容区域。每个内容区域都分配了一个数字，从1开始，一直到9，如表3-2所示。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@be512acde46baf1275c380e298c273e8f60cb31a/2020/11/25/7dfe6103f144a857210409deb282261c.png" alt="image-20201125214535651"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@443949bcb879d59dc02c18cf11dd8b5fb49860d0/2020/11/25/5f0d677993247281f1bac9ffe0812f1a.png" alt="image-20201125214551284"></p>
-<p>man工具通常提供的是命令所对应的最低编号的内容。</p>
-<p>手册页不是唯一的参考资料。还有另一种叫作info页面的信息。可以输入info info来了解info页面的相关内容。<br>另外，大多数命令都可以接受-help或–help选项。</p>
-<h3 id="浏览文件系统"><a href="#浏览文件系统" class="headerlink" title="浏览文件系统"></a>浏览文件系统</h3><h4 id="Linux-文件系统"><a href="#Linux-文件系统" class="headerlink" title="Linux 文件系统"></a>Linux 文件系统</h4><p>Linux将文件存储在单个目录结构中，这个目录被称为虚拟目录（virtual directory）。虚拟目录将安装在PC上的所有存储设备的文件路径纳入单个目录结构中。<br>Linux虚拟目录结构只包含一个称为根（root）目录的基础目录。根目录下的目录和文件会按照访问它们的目录路径一一列出。</p>
+			<p>主要内容总结：</p>
+<p>ps和top命令在判断系统的状态时特别重要，能看到哪些应用在运行以及它们消耗了多少资源。<br>mount命令可以将一个物理存储设备挂载到Linux虚拟目录结构上。umount命令用来移除设备。<br>sort工具能轻松地对大数据文件进行排序，便于组织数据；grep实用工具能快速检索大数据文件来查找特定信息。tar工具能将整个目录都归档到单个文件中，方便把数据迁移到另外一个系统上。</p>
+<h2 id="监测程序"><a href="#监测程序" class="headerlink" title="监测程序"></a>监测程序</h2><h3 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef</span><br></pre></td></tr></table></figure>
+
+<p>-e参数指定显示所有运行在系统上的进程；-f参数则扩展了输<br>出，这些扩展的列包含了有用的信息。</p>
 <blockquote>
-<p>你将会发现Linux使用正斜线（/）而不是反斜线（\）在文件路径中划分目录。在Linux中，反斜线用来标识转义字符，要是用在文件路径中的话会导致各种各样的问题。</p>
+<p>ps命令只会显示运行在当前控制台下的属于当前用户的进<br>程。</p>
 </blockquote>
-<p>要注意的是，路径本身并没有提供任何有关文件究竟存放在哪个物理磁盘上的信息。<br>Linux虚拟目录中比较复杂的部分是它如何协调管理各个存储设备。在Linux PC上安装的第一块硬盘称为根驱动器。根驱动器包含了虚拟目录的核心，其他目录都是从那里开始构建的。<br>Linux会在根驱动器上创建一些特别的目录，我们称之为挂载点（mount point）。挂载点是虚拟目录中用于分配额外存储设备的目录。虚拟目录会让文件和目录出现在这些挂载点目录中，然而实际上它们却存储在另外一个驱动器中。<br>通常系统文件会存储在根驱动器中，而用户文件则存储在另一驱动器中，如图3-2所示。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@a367f2c27f7df9d46807387c7ca0b9af413670fb/2020/11/25/50ea84e85151a4349af393c39d012dd0.png" alt="image-20201125215013341"></p>
-<p>图3-2展示了计算机中的两块硬盘。一块硬盘和虚拟目录的根目录（由正斜线/表示）关联起来。剩下的硬盘就可以挂载到虚拟目录结构中的任何地方。在这个例子中，第二块硬盘被挂载到了/home位置，用户目录都位于这个位置。<br>Linux文件系统结构是从Unix文件结构演进过来的。在Linux文件系统中，通用的目录名用于表示一些常见的功能。表3-3列出了一些较常见的Linux顶层虚拟目录名及其内容。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@66e9ddf89ea0051e5a0505b55eee53c4100f45d7/2020/11/25/9341d729e659a7dc95d7cd00840e9f14.png" alt="image-20201125215340375"></p>
-<p>常见的目录名均基于文件系统层级标准（filesystem hierarchy standard，FHS）。很多Linux发行版都遵循了FHS。</p>
-<h4 id="遍历目录"><a href="#遍历目录" class="headerlink" title="遍历目录"></a>遍历目录</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd</span><br><span class="line">pwd</span><br></pre></td></tr></table></figure>
+<p>结果列表头及意义：</p>
+<ul>
+<li>UID：启动这些进程的用户。</li>
+<li>PID：进程的进程ID。</li>
+<li>PPID：父进程的进程号（如果该进程是由另一个进程启动的）。</li>
+<li>C：进程生命周期中的CPU利用率。</li>
+<li>STIME：进程启动时的系统时间。</li>
+<li>TTY：进程启动时的终端设备。</li>
+<li>TIME：运行进程需要的累计CPU时间。</li>
+<li>CMD：启动的程序名称。</li>
+</ul>
+<p>如果想要获得更多的信息，可采用-l参数，它会产生一个长格式输出。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -l</span><br></pre></td></tr></table></figure>
 
-<p>绝对文件路径总是以正斜线（/）作为起始，指明虚拟文件系统的根目录。</p>
-<p>相对文件路径允许用户指定一个基于当前位置的目标文件路径。相对文件路径不以代表根目录的正斜线（/）开头，而是以目录名（如果用户准备切换到当前工作目录下的一个目录）或是一个特殊字符开始。</p>
-<p>有两个特殊字符可用于相对文件路径中：<br> 单点符（.），表示当前目录；<br> 双点符（..），表示当前目录的父目录。</p>
-<h3 id="文件和目录列表"><a href="#文件和目录列表" class="headerlink" title="文件和目录列表"></a>文件和目录列表</h3><h4 id="基本列表功能"><a href="#基本列表功能" class="headerlink" title="基本列表功能"></a>基本列表功能</h4><p>注意，ls命令输出的列表是按字母排序的（按列排序而不是按行排序）。如果用户用的是支持彩色的终端仿真器，ls命令还可以用不同的颜色来区分不同类型的文件。LS_COLORS环境变量控制着这个功能。</p>
-<p>如果没安装彩色终端仿真器，可用带-F参数的ls命令轻松区分文件和目录。</p>
-<p>-F参数在目录名后加了正斜线（/），以方便用户在输出中分辨它们。类似地，它会在可执行文件（比如上面的my_script文件）的后面加个星号，以便用户找出可在系统上运行的文件。</p>
-<p>要把隐藏文件和普通文件及目录一起显示出来，就得用到-a参数。</p>
-<p>-R参数是ls命令可用的另一个参数，叫作递归选项。它列出了当前目录下包含的子目录中的文件。如果目录很多，这个输出就会很长。</p>
-<h4 id="显示长列表"><a href="#显示长列表" class="headerlink" title="显示长列表"></a>显示长列表</h4><p>在基本的输出列表中，ls命令并未输出太多每个文件的相关信息。要显示附加信息，另一个常用的参数是-l。-l参数会产生长列表格式的输出，包含了目录中每个文件的更多相关信息。</p>
-<p>这种长列表格式的输出在每一行中列出了单个文件或目录。除了文件名，输出中还有其他有用信息。输出的第一行显示了在目录中包含的总块数。在此之后，每一行都包含了关于文件（或目录）的下述信息：<br> 文件类型，比如目录（d）、文件（-）、字符型文件（c）或块设备（b）；<br> 文件的权限；<br> 文件的硬链接总数；<br> 文件属主的用户名；<br> 文件属组的组名；<br> 文件的大小（以字节为单位）；<br> 文件的上次修改时间；<br> 文件名或目录名。</p>
-<h4 id="过滤输出列表"><a href="#过滤输出列表" class="headerlink" title="过滤输出列表"></a>过滤输出列表</h4><p>这个过滤器就是一个进行简单文本匹配的字符串。可以在要用的命令行参数之后添加这个过滤器：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls -l my_script</span></span><br></pre></td></tr></table></figure>
+<p>注意使用了-l参数之后多出的那些列。</p>
+<ul>
+<li>F：内核分配给进程的系统标记。</li>
+<li>S：进程的状态（O代表正在运行；S代表在休眠；R代表可运行，正等待运行；Z代表僵化，进程已结束但父进程已不存在；T代表停止）。</li>
+<li>PRI：进程的优先级（越大的数字代表越低的优先级）</li>
+<li>NI：谦让度值用来参与决定优先级。</li>
+<li>ADDR：进程的内存地址。</li>
+<li>SZ：假如进程被换出，所需交换空间的大致大小</li>
+<li>WCHAN：进程休眠的内核函数的地址。</li>
+</ul>
+<p>好用的其他命令<code>ps --forest</code></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ps --forest</span><br><span class="line">  PID TTY          TIME CMD</span><br><span class="line">31501 pts/0    00:00:00 bash</span><br><span class="line">31556 pts/0    00:00:00  \_ ps</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>ls命令能够识别标准通配符，并在过滤器中用它们进行模式匹配：<br> 问号（?）代表一个字符；<br> 星号（*）代表零个或多个字符。</p>
-<h3 id="处理文件"><a href="#处理文件" class="headerlink" title="处理文件"></a>处理文件</h3><h4 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h4><p>touch命令轻松创建空文件。</p>
-<p>touch命令创建了你指定的新文件，并将你的用户名作为文件的属主。注意，文件的大小是零，因为touch命令只创建了一个空文件。</p>
-<p>touch命令还可用来改变文件的修改时间。这个操作并不需要改变文件的内容。</p>
-<p>如果只想改变访问时间，可用-a参数。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls -l test_one</span></span><br><span class="line">-rw-rw-r-- 1 christine christine 0 May 21 14:35 test_one</span><br><span class="line"><span class="meta">$</span><span class="bash"> touch -a test_one</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -l test_one</span></span><br><span class="line">-rw-rw-r-- 1 christine christine 0 May 21 14:35 test_one</span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -l --time=atime test_one</span></span><br><span class="line">-rw-rw-r-- 1 christine christine 0 May 21 14:55 test_one</span><br></pre></td></tr></table></figure>
+<h3 id="展示实时情况"><a href="#展示实时情况" class="headerlink" title="展示实时情况"></a>展示实时情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
 
-<p>要想查看文件的访问时间，需要加入另外一个参数：–time=atime。有了这个参数，就能够显示出已经更改过的文件访问时间。</p>
-<h4 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h4><p>在最基本的用法里，cp命令需要两个参数——源对象和目标对象：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp source destination</span><br></pre></td></tr></table></figure>
-
-<p>当source和destination参数都是文件名时，cp命令将源文件复制成一个新文件，并且以destination命名。新文件就像全新的文件一样，有新的修改时间。</p>
-<p>如果目标文件已经存在，cp命令可能并不会提醒这一点。最好是加上-i选项，强制shell询问是否需要覆盖已有文件。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cp -i test_one /home/jake/Documents/</span></span><br></pre></td></tr></table></figure>
-
+<p>效果：</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@f3e059853edc7cedf7ed17a42f22f353c59a55e1/2020/12/01/1de86e84c9b5e98bb5cc05fd5d8b9b71.png" alt="image-20201201145033027"></p>
+<ul>
+<li>PR：进程的优先级。</li>
+<li>NI：进程的谦让度值。</li>
+<li>VIRT：进程占用的虚拟内存总量。</li>
+<li>RES：进程占用的物理内存总量。</li>
+<li>SHR：进程和其他进程共享的内存总量。</li>
+</ul>
 <blockquote>
-<p>之前的例子在目标目录名尾部加上了一个正斜线（/），这表明Documents是目录而非文件。这有助于明确目的，而且在复制单个文件时非常重要。如果没有使用正斜线，子目录/home/jake/Documents又不存在，就会有麻烦。在这种情况下，试图将一个文件复制到Documents子目录反而会创建一个名为Documents的文件，连错误消息都不会显示！</p>
+<p>键入f允许你选择对输出进行排序的字段，键入d允许你修改轮询间隔。键入q可以退出top。</p>
 </blockquote>
-<p>本章在前面介绍了特殊符号可以用在相对文件路径中。其中的单点符（.）就很适合用于cp命令。记住，单点符表示当前工作目录。如果需要将一个带有很长的源对象名的文件复制到当前工作目录中时，单点符能够简化该任务。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cp -i /etc/NetworkManager/NetworkManager.conf .</span></span><br></pre></td></tr></table></figure>
+<h3 id="结束进程"><a href="#结束进程" class="headerlink" title="结束进程"></a>结束进程</h3><p>在Linux中，进程之间通过信号来通信。进程的信号就是预定义好的一个消息，进程能识别它并决定忽略还是作出反应。进程如何处理信号是由开发人员通过编程来决定的。大多数编写完善的程序都能接收和处理标准Unix进程信号。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@c9dedfc1c94595e9993e2a1165fe15feee8e4dbd/2020/12/01/7c7fa9aac6575c249ea5f45bbe63f790.png" alt="image-20201201145410259"></p>
+<p>在Linux上有两个命令可以向运行中的进程发出进程信号。</p>
+<ul>
+<li>kill命令</li>
+<li>killall命令</li>
+</ul>
+<p>kill命令可通过进程ID（PID）给进程发信号。默认情况下，kill命令会向命令行中列出的全部PID发送一个TERM信号。遗憾的是，你只能用进程的PID而不能用命令名，所以kill命令有时并不好用。</p>
+<p>要发送进程信号，你必须是进程的属主或登录为root用户。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill 3940</span><br></pre></td></tr></table></figure>
 
-<p>cp命令的-R参数威力强大。可以用它在一条命令中递归地复制整个目录的内容。也可以在cp命令中使用通配符。</p>
-<h4 id="制表键自动补全"><a href="#制表键自动补全" class="headerlink" title="制表键自动补全"></a>制表键自动补全</h4><h4 id="链接文件"><a href="#链接文件" class="headerlink" title="链接文件"></a>链接文件</h4><p>链接文件是Linux文件系统的一个优势。如需要在系统上维护同一文件的两份或多份副本，除了保存多份单独的物理文件副本之外，还可以采用保存一份物理文件副本和多个虚拟副本的方法。这种虚拟的副本就称为链接。链接是目录中指向文件真实位置的占位符。在Linux中有两种不同类型的文件链接：<br> 符号链接<br> 硬链接</p>
-<p>符号链接就是一个实实在在的文件，它指向存放在虚拟目录结构中某个地方的另一个文件。</p>
-<p>这两个通过符号链接在一起的文件，彼此的内容并不相同。</p>
-<p>要为一个文件创建符号链接，原始文件必须事先存在。然后可以使用ln命令以及-s选项来创建符号链接。</p>
-<p>证明链接文件是独立文件的方法是查看<code>inode</code>编号。文件或目录的<code>inode</code>编号是一个用于标识的唯一数字，这个数字由内核分配给文件系统中的每一个对象。要查看文件或目录的<code>inode</code>编号，可以给ls命令加入-i参数。</p>
-<p>硬链接会创建独立的虚拟文件，其中包含了原始文件的信息及位置。但是它们从根本上而言是同一个文件。引用硬链接文件等同于引用了源文件。要创建硬链接，原始文件也必须事先存在，只不过这次使用ln命令时不再需要加入额外的参数了。</p>
-<blockquote>
-<p>只能对处于同一存储媒体的文件创建硬链接。要想在不同存储媒体的文件之间创建链接，只能使用符号链接。</p>
-</blockquote>
-<h4 id="重命名文件"><a href="#重命名文件" class="headerlink" title="重命名文件"></a>重命名文件</h4><p>mv命令可以将文件和目录移动到另一个位置或重新命名。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv fall fzll</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mv fzll Pictures/</span></span><br><span class="line">mv命令移动整个目录及其内容。</span><br><span class="line"><span class="meta">$</span><span class="bash"> mv Mod_Scripts Old_Scripts</span></span><br></pre></td></tr></table></figure>
+<p>TERM信号告诉进程可能的话就停止运行。不过，如果有不服管教的进程，那它通常会忽略这个请求。如果要强制终止，-s参数支持指定其他信号（用信号名或信号值）。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -s HUP 3940</span><br></pre></td></tr></table></figure>
 
-<blockquote>
-<p>和cp命令类似，也可以在mv命令中使用-i参数。这样在命令试图覆盖已有的文件时，你就会得到提示。</p>
-</blockquote>
-<h4 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h4><p>在Linux中，删除（deleting）叫作移除（removing）。bash shell中删除文件的命令是<code>rm</code>。<code>rm</code>命令的基本格式非常简单。</p>
-<p>rm命令的另外一个特性是，如果要删除很多文件且不受提示符的打扰，可以用-f参数强制删除。</p>
-<h3 id="处理目录"><a href="#处理目录" class="headerlink" title="处理目录"></a>处理目录</h3><h4 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir New_Dir</span></span><br><span class="line">要想同时创建多个目录和子目录，需要加入-p参数：</span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir -p New_Dir/Sub_Dir/Under_Dir</span></span><br></pre></td></tr></table></figure>
+<p>killall命令非常强大，它支持通过进程名而不是PID来结束进程。killall命令也支持通配符，这在系统因负载过大而变得很慢时很有用。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall http*</span><br></pre></td></tr></table></figure>
 
-<h4 id="删除目录"><a href="#删除目录" class="headerlink" title="删除目录"></a>删除目录</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rmdir New_Dir</span></span><br><span class="line">rmdir: failed to remove &#x27;New_Dir&#x27;: Directory not empty</span><br></pre></td></tr></table></figure>
+<h2 id="监测磁盘空间"><a href="#监测磁盘空间" class="headerlink" title="监测磁盘空间"></a>监测磁盘空间</h2><h3 id="挂载存储媒体"><a href="#挂载存储媒体" class="headerlink" title="挂载存储媒体"></a>挂载存储媒体</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount</span><br></pre></td></tr></table></figure>
 
-<p>默认情况下，<code>rmdir</code>命令只删除空目录。因为我们在New_Dir目录下创建了一个文件my_file，所以<code>rmdir</code>命令拒绝删除目录。<br>要解决这一问题，得先把目录中的文件删掉，然后才能在空目录上使用rmdir命令。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rm -i New_Dir/my_file</span></span><br><span class="line">rm: remove regular empty file &#x27;New_Dir/my_file&#x27;? y</span><br><span class="line"><span class="meta">$</span></span><br><span class="line"><span class="bash">$ rmdir New_Dir</span></span><br></pre></td></tr></table></figure>
+<p>mount命令提供如下四部分信息：</p>
+<ul>
+<li>媒体的设备文件名</li>
+<li>媒体挂载到虚拟目录的挂载点</li>
+<li>文件系统类型</li>
+<li>已挂载媒体的访问状态</li>
+</ul>
+<p>要手动在虚拟目录中挂载设备，需要以root用户身份登录，或是以root用户身份运行sudo命令。下面是手动挂载媒体设备的基本命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t type device directory</span><br></pre></td></tr></table></figure>
 
-<p>也可以在整个非空目录上使用<code>rm</code>命令。使用-r选项使得命令可以向下进入目录，删除其中的文件，然后再删除目录本身。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rm -ir Small_Dir</span></span><br><span class="line">rm -rf命令既没有警告信息，也没有声音提示</span><br><span class="line"><span class="meta">$</span><span class="bash"> rm -rf Small_Dir</span></span><br></pre></td></tr></table></figure>
+<p>type参数指定了磁盘被格式化的文件系统类型。比如说，手动将U盘/dev/sdb1挂载到/media/disk</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t vfat /dev/sdb1 /media/disk</span><br></pre></td></tr></table></figure>
 
-<h3 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h3><h4 id="查看文件类型"><a href="#查看文件类型" class="headerlink" title="查看文件类型"></a>查看文件类型</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> file my_file</span></span><br></pre></td></tr></table></figure>
+<p>媒体设备挂载到了虚拟目录后，root用户就有了对该设备的所有访问权限，而其他用户的访问则会被限制。你可以通过目录权限指定用户对设备的访问权限。</p>
+<p>-o参数允许在挂载文件系统时添加一些以逗号分隔的额外选项。以下为常用的选项。</p>
+<ul>
+<li> ro：以只读形式挂载。</li>
+<li> rw：以读写形式挂载。</li>
+<li> user：允许普通用户挂载文件系统。</li>
+<li> check=none：挂载文件系统时不进行完整性校验。</li>
+<li> loop：挂载一个文件。</li>
+</ul>
+<p>从Linux系统上移除一个可移动设备时，不能直接从系统上移除，而应该先卸载。</p>
+<p>卸载设备的命令是umount（是的，你没看错，命令名中并没有字母n，这一点有时候很让人困惑）。</p>
+<p> 如果在卸载设备时，系统提示设备繁忙，无法卸载设备，通常是有进程还在访问该设备或使用该设备上的文件。这时可用lsof命令获得使用它的进程信息，然后在应用中停止使用该设备或停止该进程。lsof命令的用法很简单：lsof /path/to/device/node，或者lsof /path/to/mount/point。</p>
+<h3 id="df"><a href="#df" class="headerlink" title="df"></a>df</h3><p>df命令会显示每个有数据的已挂载文件系统。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@456e329b4a53da788c027426e76134702e15ad4b/2020/12/01/75d944e34a91cceac1592754b8d8dcaa.png" alt="image-20201201151420923"></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
 
-<h4 id="查看整个文件"><a href="#查看整个文件" class="headerlink" title="查看整个文件"></a>查看整个文件</h4><p>cat命令是显示文本文件中所有数据的得力工具。-n参数会给所有的行加上行号。如果只想给有文本的行加上行号，可以用-b参数。最后，如果不想让制表符出现，可以用-T参数。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat -T test1</span></span><br><span class="line">hello</span><br><span class="line">This is a test file.</span><br><span class="line">That we&#x27;ll use to^Itest the cat command.</span><br></pre></td></tr></table></figure>
+<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@c4e1b2efcaa41fad65af8f6a8c667faa3748557c/2020/12/01/125212ff9fe3d14397622ba5dfda6be5.png" alt="image-20201201151535885"></p>
+<h3 id="du"><a href="#du" class="headerlink" title="du"></a>du</h3><p>du命令可以显示某个特定目录（默认情况下是当前目录）的<br>磁盘使用情况。</p>
+<p>下面是能让du命令用起来更方便的几个命令行参数。</p>
+<ul>
+<li>-c：显示所有已列出文件总的大小。</li>
+<li>-h：按用户易读的格式输出大小，即用K替代千字节，用M替代兆字节，用G替代吉字节。</li>
+<li>-s：显示每个输出参数的总计。</li>
+</ul>
+<h2 id="处理数据文件"><a href="#处理数据文件" class="headerlink" title="处理数据文件"></a>处理数据文件</h2><h3 id="排序数据"><a href="#排序数据" class="headerlink" title="排序数据"></a>排序数据</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sort filename</span><br><span class="line">数字排序</span><br><span class="line">sort -n filname</span><br><span class="line">按月排序</span><br><span class="line">sort -M filename</span><br></pre></td></tr></table></figure>
 
-<p>-T参数会用^I字符组合去替换文中的所有制表符。</p>
-<p>cat命令的主要缺陷是：一旦运行，你就无法控制后面的操作。为了解决这个题，开发人员编写了more命令。more命令会显示文本文件的内容，但会在显示每页数据之后停下来。</p>
-<p>less命令的操作和more命令基本一样，一次显示一屏的文件文本。除了支持和more命令相同的命令集，它还包括更多的选项。</p>
-<h4 id="查看部分文件"><a href="#查看部分文件" class="headerlink" title="查看部分文件"></a>查看部分文件</h4><p>tail命令会显示文件最后几行的内容（文件的“尾部”）。默认情况下，它会显示文件的末尾10行。可以向tail命令中加入-n参数来修改所显示的行数。</p>
-<p>head命令，顾名思义，会显示文件开头那些行的内容。默认情况下，它会显示文件前10行的文本。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@7fa3a99d6f9117fa49268fb7b9ccdcc9faed1333/2020/12/01/4fb493d3489a807ec5d6a5a10fcca36f.png" alt="image-20201201153114482"></p>
+<p>-k和-t参数在对按字段分隔的数据进行排序时非常有用，例如/etc/passwd文件。可以用-t参数来指定字段分隔符，然后用-k参数来指定排序的字段。举个例子，要对前面提到的密码文件/etc/passwd根据用户ID进行数值排序，可以这么做：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort -t &#x27;:&#x27; -k 3 -n /etc/passwd</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">bin:x:1:1:bin:/bin:/sbin/nologin</span><br><span class="line">daemon:x:2:2:daemon:/sbin:/sbin/nologin</span><br><span class="line">adm:x:3:4:adm:/var/adm:/sbin/nologin</span><br><span class="line">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</span><br></pre></td></tr></table></figure>
+
+<p>现在数据已经按第三个字段——用户ID的数值排序。</p>
+<p>-n参数在排序数值时非常有用，比如du命令的输出。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh * | sort -nr</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@3e04e9972f91006bd7d133f805d67ab41a50660e/2020/12/01/1b66df11d3ae60459f58b12bd4322818.png" alt="image-20201201153437566"></p>
+<p>-r参数将结果按降序输出。管道命令（|）将du命令的输出重定向到sort命令。</p>
+<h3 id="搜索数据"><a href="#搜索数据" class="headerlink" title="搜索数据"></a>搜索数据</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [options] pattern [file]</span><br></pre></td></tr></table></figure>
+
+<p>如果要进行反向搜索（输出不匹配该模式的行），可加-v参数。</p>
+<p>如果要显示匹配模式的行所在的行号，可加-n参数。</p>
+<p>如果只要知道有多少行含有匹配的模式，可用-c参数。</p>
+<p>如果要指定多个匹配模式，可用-e参数来指定每个模式。</p>
+<p>默认情况下，grep命令用基本的Unix风格正则表达式来匹配模式。Unix风格正则表达式采用特殊字符来定义怎样查找匹配的模式。</p>
+<h3 id="压缩数据"><a href="#压缩数据" class="headerlink" title="压缩数据"></a>压缩数据</h3><p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@2406d0472ed65cd3649a696296823367f86c7585/2020/12/01/84827d1a33196fbba9259b0c8a35b16d.png" alt="image-20201201153928694"></p>
+<p>gzip软件包是GNU项目的产物，意在编写一个能够替代原先Unix中compress工具的免费版本。这个软件包含有下面的工具。</p>
+<ul>
+<li><p>gzip：用来压缩文件。</p>
+</li>
+<li><p>gzcat：用来查看压缩过的文本文件的内容。</p>
+</li>
+<li><p>gunzip：用来解压文件。</p>
+<p>这些工具基本上跟bzip2工具的用法一样。</p>
+</li>
+</ul>
+<h3 id="归档数据"><a href="#归档数据" class="headerlink" title="归档数据"></a>归档数据</h3><p>tar命令最开始是用来将文件写到磁带设备上归档的，然而它也能把输出写到文件里，这种用法在Linux上已经普遍用来归档数据了。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar function [options] object1 object2 ...</span><br></pre></td></tr></table></figure>
+
+<p>function参数定义了tar命令应该做什么，如表4-8所示。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@eeb990635f5b225c2cf63a23bcf6407b05d614ae/2020/12/01/a241413afd9e707f1605852c8f1c05de.png" alt="image-20201201154358557"></p>
+<p>每个功能可用选项来针对tar归档文件定义一个特定行为。表4-9列出了这些选项中能和tar命令一起使用的常见选项。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@5d891417c9580085fff4a15111f4ce3839afe519/2020/12/01/4f099337b69ea9cae09426d5de0454f4.png" alt="image-20201201154601465"></p>
+<p>这些选项经常合并到一起使用。首先，你可以用下列命令来创建一个归档文件：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -cvf test.tar test/ test2/</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf test.tar</span><br></pre></td></tr></table></figure>
+
+<p>上面的命令创建了名为test.tar的归档文件，含有test和test2目录内容。接着，用下列命令：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -tf test.tar</span><br></pre></td></tr></table></figure>
+
+<p>列出tar文件test.tar的内容（但并不提取文件）。最后，用命令：</p>
+<p>通过这一命令从tar文件test.tar中提取内容。如果tar文件是从一个目录结构创建的，那整个目录结构都会在当前目录下重新创建。</p>
+<p>下载了开源软件之后，你会经常看到文件名以.tgz结尾。这些是gzip压缩过的tar文件可以用命令<code>tar -zxvf filename.tgz</code>来解压。</p>
 	
 		</div>
 		
@@ -424,12 +487,8 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" title="Vimtutor 总结" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2020/11/25/Blog-%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/" title="Blog 搭建相关技术" rel="next">
+			<a href="/2020/12/01/shell-%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80/" title="shell 脚本基础" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -447,29 +506,6 @@
 <div class="relate-post">
 	
 		<ul>
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" title="shell 命令2">
-								shell 命令2			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十二月 1日, 2020				
-							</p>
-							<p class="relate-post-content">
-								主要内容总结：
-ps和top命令在判断系统的状态时特别重要，能看到哪些应用在运行以及它们消耗了多少资源。mount命令可以将一个物理存储设备挂载到Linux虚拟目录结构上。umount命令用来移除设备。sort工具能轻松地对大数据文件...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" title="shell 命令2">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="shell 命令2"/>
-							</a>
-						</div>
-					</li>												
 			
 					<li>
 						<div class="relate-post-text">
@@ -491,6 +527,29 @@ Shell编程就是把一系列命令写在一个文件里面，当有恰当地权
 							<a href="/2020/12/01/shell-%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80/" title="shell 脚本基础">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="shell 脚本基础"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令">
+								Shell 基本命令			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 25日, 2020				
+							</p>
+							<p class="relate-post-content">
+								基础命令小结bash手册man命令用来访问存储在Linux系统上的手册页面。在想要查找的工具的名称前面输入man命令，就可以找到那个工具相应的手册条目。
+当使用man命令查看命令手册页的时候，这些手册页是由分页程序（pager）来显示...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Shell 基本命令"/>
 							</a>
 						</div>
 					</li>												

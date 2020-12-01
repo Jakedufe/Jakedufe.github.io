@@ -1,0 +1,1219 @@
+<!--
+	作者：Sariay
+	时间：2018-08-26
+	描述：There may be a bug, but don't worry, Qiling(器灵) says that it can work normally! aha!
+-->
+<!DOCTYPE html>
+<html class="html-loading">
+		
+
+<head>
+	<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+  <title>
+    
+      shell 脚本基础 | Jake&#39;Blog
+    
+  </title>
+  <meta name="author" content="Jake">
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+	<!-- favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+
+  <!-- css -->
+  
+<link rel="stylesheet" href="/css/Annie.css">
+
+  
+  <!-- jquery -->
+	
+<script src="/plugin/jquery/jquery.min.js"></script>
+
+
+<script>
+    const CONFIG_BGIMAGE = {
+      mode: 'normal',
+      normalSrc: '/img/header-bg.jpg',
+      randomYouMax: 110,
+      randomYouSrc: 'https://sariay.github.io/Random-img/',
+	  randomOtherSrc: 'https://api.berryapi.net/?service=App.Bing.Images&day=-0',
+	  preloaderEnable: true
+    }
+	
+    const CONFIG_LEACLOUD_COUNT = {
+      enable: true,
+	  appId: 'mqBYiWmeh7S3m55DJwitYGxF-gzGzoHsz',
+	  appKey: 'h2zCa8cC9XeGRc6D23VP7x5J',
+	  serverURLs: 'http' || ' '
+    }
+  </script>
+<meta name="generator" content="Hexo 5.2.0"></head>
+	<body>
+		<!-- Preloader -->
+
+	<div id="preloader">
+		<div class="pre-container">
+			
+				<div class="cyclic">
+					<div><span></span></div>
+					<div><span></span></div>
+					<div><span></span></div>
+					<div><span></span></div>
+				</div>
+						
+		</div>
+	</div>
+
+
+<!-- header -->
+<header class="fixbackground bg-pan-br">
+	<div class="mask">
+		<!-- motto -->
+		<div class="h-body">	
+			
+				<div class="motto text-shadow-pop-left">
+					<p class="content" id="motto-content">获取中...</p>
+					<p>-<p>
+					<p class="author" id="motto-author">Just a minute...</p>
+				</div>
+			
+		</div>
+		
+		<!-- others: such as time... -->			
+		<div class="h-footer">
+			<a href="javascript:;" id="read-more" class="scroll-down">
+				<span class="icon-anchor1 animation-scroll-down"></span>
+			</a>
+		</div>
+	</div>
+</header>
+
+<div id="navigation-hide">
+	<!-- Progress bar -->
+	<div id="progress-bar"></div>
+
+	<!-- Progress percent -->
+	<div id="progress-percentage"><span>0.0%</span></div>
+
+	<div class="toc-switch"><span class="switch-button">目录</span></div>
+
+	<!-- Page title -->
+	<p>
+		
+			「shell 脚本基础」
+		
+	</p>
+
+	
+	
+		<span id="star-button" rel="unlike">
+			<i class="icon-heart"></i>
+		</span>
+	
+
+	<!-- Nav trigger for navigation-H-->
+	<a class="nav-trigger"><span></span></a>
+</div>
+
+<!-- Navigation in div(id="navigation-H") -->
+<nav class="nav-container" id="cd-nav">
+	<div class="nav-header">
+		<span class="logo"> 
+			<img src="/img/logo.png">
+		</span>
+		<a href="javascript:;" class="nav-close"></a>
+	</div>
+	
+	<div class="nav-body">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+	
+	<div class="nav-footer">
+		<ul id="global-social">
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-one"><span class="path1"></span><span class="path2"></span></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-zhihu"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-github"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-sina-weibo "></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-pinterest2"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-instagram"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="http://github.com/" target="_blank">
+				<span class="icon-twitter"></span>
+			</a>
+		</li>
+	
+		<li>
+			<a href="/atom.xml" target="_blank">
+				<span class="icon-rss"></span>
+			</a>
+		</li>
+			
+</ul>
+
+	</div>
+</nav>
+			
+		<!--main-->
+		<main>
+			<!--
+	时间：2018-11-17
+	描述：
+		插件名称：katelog.min.js
+		插件作者：KELEN
+		插件来源: https://github.com/KELEN/katelog
+-->
+
+	
+		<div class="layout-toc">
+			<div id="layout-toc">
+				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
+			</div>
+		</div>
+
+		
+<script src="/plugin/toc/katelog.min.js"></script>
+
+
+		
+	 
+
+<div class="layout-post">
+	<div id="layout-post">
+		<div class="article-title">
+			
+	<a href="/2020/12/01/shell-%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80/" itemprop="url">
+		shell 脚本基础
+	</a>
+
+		</div>
+
+		<div class="article-meta">
+			<span>
+				<i class="icon-calendar1"></i>
+				
+				
+
+
+
+
+	更新于
+
+	<a href="/2020/12/01/shell-%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80/" itemprop="url">
+		<time datetime="2020-12-01T06:33:09.000Z" itemprop="dateUpdated">
+	  		2020-12-01
+	  </time>
+	</a> 
+
+
+
+			</span>
+			<span>
+				
+	<i class="icon-price-tags"></i>
+	
+		<a href="/tags/shell/" class=" ">
+			shell
+		</a>
+	
+		
+			</span>
+			
+			
+
+	
+    <span class="leancloud_visitors" id="/2020/12/01/shell-%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80/_visitors" data-url="/2020/12/01/shell-%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80/" data-title="shell 脚本基础">
+       	<i class="icon-eye"></i>
+       	热度
+        
+            <i class="leancloud_visitors_count" id="leancloud_visitors_count">1</i>
+                   
+    </span>
+    
+
+
+
+	
+    <span class="leancloud_likes" id="/2020/12/01/shell-%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80/_likes" data-url="/2020/12/01/shell-%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80/" data-title="shell 脚本基础" rel="unlike">
+        <i class="icon-heart"></i>
+        喜欢
+        <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
+    </span>
+	
+
+		</div>
+
+		<div class="article-content" id="article-content">
+			<p>学习网站：<a target="_blank" rel="noopener" href="https://www.learnshell.org/">https://www.learnshell.org/</a>    </p>
+<p>本部分是基础篇，具体内容可参见目录。</p>
+<p>Shell编程就是把一系列命令写在一个文件里面，当有恰当地权限的时候就可以被执行。第一行以<code>#！/bin/bash</code>开头，指明解释器全路径。除第一行以外的<code>#</code>表示注释的开启。</p>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><p>​    Shell 的变量在其被赋值时被创建。变量包括数字、字符和字符串，变量名大小写敏感、可以包括下划线<code>_</code>。变量用<code>=</code>赋值，且两侧不能有多余的空格。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">PRICE_PER_APPLE=5</span><br><span class="line">MyFirstLetters=ABC</span><br><span class="line">greeting=&#x27;Hello        world!&#x27;</span><br></pre></td></tr></table></figure>
+
+<h3 id="引用变量"><a href="#引用变量" class="headerlink" title="引用变量"></a>引用变量</h3><p><code>\</code>转义</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PRICE_PER_APPLE=5</span><br><span class="line">echo &quot;The price of an Apple today is: \$HK $PRICE_PER_APPLE&quot;</span><br></pre></td></tr></table></figure>
+
+<p>output</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The price of an Apple today is: $HK 5</span><br></pre></td></tr></table></figure>
+
+<p><code>$&#123;&#125;</code>消除歧义</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">MyFirstLetters=ABC</span><br><span class="line">echo &quot;The first 10 letters in the alphabet are: $&#123;MyFirstLetters&#125;DEFGHIJ&quot;</span><br></pre></td></tr></table></figure>
+
+<p>output</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">The first 10 letters in the alphabet are: ABCDEFGHIJ</span><br></pre></td></tr></table></figure>
+
+<p><code>&quot;&quot;</code>保留空格</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">greeting=&#x27;Hello        world!&#x27;</span><br><span class="line">echo $greeting&quot; now with spaces: $greeting&quot;</span><br></pre></td></tr></table></figure>
+
+<p>output</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hello world! now with spaces: Hello        world!</span><br></pre></td></tr></table></figure>
+
+<p><code>&#39;&#39;</code>或者<code>$()</code>封装命令</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">FILELIST=`ls`</span><br><span class="line">FileWithTimeStamp=/tmp/my-dir/file_$(/bin/date +%Y-%m-%d).txt</span><br></pre></td></tr></table></figure>
+
+<p>练习：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Change this code</span></span><br><span class="line">BIRTHDATE=&quot;Jan 1, 2000&quot;</span><br><span class="line">Presents=10</span><br><span class="line">BIRTHDAY=`date -d &quot;$BIRTHDATE&quot; +%A`</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="传递参数"><a href="#传递参数" class="headerlink" title="传递参数"></a>传递参数</h2><p>传递参数是指在启动脚本的时候加入一些参数，比如：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./bin/my_shopping.sh apple 5 banana 8 &quot;Fruit Basket&quot; 15</span><br></pre></td></tr></table></figure>
+
+<p>那么，在脚本的内容中就可以引用这些变量。</p>
+<p><code>$0</code>表示第一个参数，以此类推：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">echo $3 --&gt; results with: banana</span><br><span class="line"></span><br><span class="line">BIG=$5</span><br><span class="line"></span><br><span class="line">echo &quot;A $BIG costs just $6&quot; --&gt; results with: A Fruit Basket costs just 15</span><br></pre></td></tr></table></figure>
+
+<p><code>$#</code>表示一共有几个参数，<code>$#</code>可以展示所有参数：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo $# --&gt; results with: 6</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h2><p>数组的命名规则与变量相同，用一对括号初始化，元素之间以空格分隔。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_array=(apple banana &quot;Fruit Basket&quot; orange)</span><br><span class="line">new_array[2]=apricot</span><br></pre></td></tr></table></figure>
+
+<p>数组成员不用一开始就初始化，<code>$&#123;#arrayname[@]&#125;</code>用来表示数组长度：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">my_array=(apple banana &quot;Fruit Basket&quot; orange)</span><br><span class="line">echo  $&#123;#my_array[@]&#125;                   # 4</span><br></pre></td></tr></table></figure>
+
+<p>数组元素通过下标访问：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">my_array=(apple banana &quot;Fruit Basket&quot; orange)</span><br><span class="line">echo $&#123;my_array[3]&#125;                     # orange - note that curly brackets are needed</span><br><span class="line"><span class="meta">#</span><span class="bash"> adding another array element</span></span><br><span class="line">my_array[4]=&quot;carrot&quot;                    # value assignment without a $ and curly brackets</span><br><span class="line">echo $&#123;#my_array[@]&#125;                    # 5</span><br><span class="line">echo $&#123;my_array[$&#123;#my_array[@]&#125;-1]&#125;     # carrot</span><br></pre></td></tr></table></figure>
+
+<p>展示整个数组：<code>$&#123;arrayname[@]&#125;</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">NAMES=( John Eric Jessica )</span><br><span class="line"><span class="meta">#</span><span class="bash"> write your code here</span></span><br><span class="line">NUMBERS=( 1 2 3 )</span><br><span class="line">STRINGS=( &quot;hello&quot; &quot;world&quot; )</span><br><span class="line">NumberOfNames=$&#123;#NAMES[@]&#125;</span><br><span class="line">second_name=$&#123;NAMES[1]&#125;</span><br><span class="line">echo $&#123;NUMBERS[@]&#125;</span><br><span class="line">echo $&#123;STRINGS[@]&#125;</span><br><span class="line">echo &quot;The number of names listed in the NAMES array: $NumberOfNames&quot;</span><br><span class="line">echo &quot;The second name on the NAMES list is:&quot; $&#123;second_name&#125;</span><br></pre></td></tr></table></figure>
+
+<p>练习：求三个数组的相同元素</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> enter your array comparison code here</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> initialize arrays a b c</span></span><br><span class="line">a=(3 5 8 10 6) </span><br><span class="line">b=(6 5 4 12) </span><br><span class="line">c=(14 7 5 7)</span><br><span class="line"><span class="meta">#</span><span class="bash">comparison of first two arrays a and b</span></span><br><span class="line">for x in &quot;$&#123;a[@]&#125;&quot;; do </span><br><span class="line">  in=false </span><br><span class="line">  for y in &quot;$&#123;b[@]&#125;&quot;; do </span><br><span class="line">    if [ $x = $y ];then </span><br><span class="line">      # assigning the matching results to new array z</span><br><span class="line">      z[$&#123;#z[@]&#125;]=$x</span><br><span class="line">    fi</span><br><span class="line">  done </span><br><span class="line">done</span><br><span class="line"><span class="meta">#</span><span class="bash">comparison of third array c with new array z</span></span><br><span class="line">for i in &quot;$&#123;c[@]&#125;&quot;; do </span><br><span class="line">  in=false</span><br><span class="line">  for k in &quot;$&#123;z[@]&#125;&quot;; do</span><br><span class="line">    if [ $i = $k ];then</span><br><span class="line">      # assigning the matching results to new array j</span><br><span class="line">      j[$&#123;#j[@]&#125;]=$i</span><br><span class="line">    fi</span><br><span class="line">  done </span><br><span class="line">done </span><br><span class="line"><span class="meta">#</span><span class="bash"> <span class="built_in">print</span> content of array j</span></span><br><span class="line">echo $&#123;j[@]&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="基础运算符"><a href="#基础运算符" class="headerlink" title="基础运算符"></a>基础运算符</h2><p><code>$((expression))</code>用来包含基础运算符：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">A=3</span><br><span class="line">B=$((100 * $A + 5)) # 305</span><br></pre></td></tr></table></figure>
+
+<p>The basic operators are:</p>
+<p><strong>a + b</strong> addition (a plus b)</p>
+<p><strong>a - b</strong> substraction (a minus b)</p>
+<p><strong>a * b</strong> multiplication (a times b)</p>
+<p><strong>a / b</strong> division (integer) (a divided by b)</p>
+<p><strong>a % b</strong> modulo (the integer remainder of a divided by b)</p>
+<p><strong>a</strong> <strong>**</strong> <strong>b</strong> exponentiation (a to the power of b)</p>
+<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><p>长度</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">       1234567890123456</span></span><br><span class="line">STRING=&quot;this is a string&quot;</span><br><span class="line">echo $&#123;#STRING&#125;            # 16</span><br></pre></td></tr></table></figure>
+
+<p>位置匹配</p>
+<p><code>expr</code>是一个命令，正则匹配，返回一个数字</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">STRING=&quot;this is a string&quot;</span><br><span class="line">SUBSTRING=&quot;hat&quot;</span><br><span class="line">expr index &quot;$STRING&quot; &quot;$SUBSTRING&quot;     # 1 is the position of the first &#x27;t&#x27; in $STRING</span><br></pre></td></tr></table></figure>
+
+<p>截取字串</p>
+<p>从<code>POS</code>开始截取长度为<code>LEN</code>的子字符串</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">STRING=&quot;this is a string&quot;</span><br><span class="line">POS=1</span><br><span class="line">LEN=3</span><br><span class="line">echo $&#123;STRING:$POS:$LEN&#125;   # his</span><br></pre></td></tr></table></figure>
+
+<p>没有<code>LEN</code>参数默认截取到字符串尾</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">STRING=&quot;this is a string&quot;</span><br><span class="line">echo $&#123;STRING:1&#125;           # $STRING contents without leading character</span><br><span class="line">echo $&#123;STRING:12&#125;          # ring</span><br></pre></td></tr></table></figure>
+
+<p>一个复杂的小例子</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Code to extract the First name from the data record</span></span><br><span class="line">DATARECORD=&quot;last=Clifford,first=Johnny Boy,state=CA&quot;</span><br><span class="line">COMMA1=`expr index &quot;$DATARECORD&quot; &#x27;,&#x27;`  # 14 position of first comma</span><br><span class="line">CHOP1FIELD=$&#123;DATARECORD:$COMMA1&#125;       #</span><br><span class="line">COMMA2=`expr index &quot;$CHOP1FIELD&quot; &#x27;,&#x27;`</span><br><span class="line">LENGTH=`expr $COMMA2 - 6 - 1`</span><br><span class="line">FIRSTNAME=$&#123;CHOP1FIELD:6:$LENGTH&#125;      # Johnny Boy</span><br><span class="line">echo $FIRSTNAME</span><br></pre></td></tr></table></figure>
+
+<p>子串替换</p>
+<p>替换第一个匹配子字符串</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STRING=&quot;to be or not to be&quot;</span><br><span class="line">echo $&#123;STRING[@]/be/eat&#125;        # to eat or not to be</span><br></pre></td></tr></table></figure>
+
+<p>替换所有匹配子字符串</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STRING=&quot;to be or not to be&quot;</span><br><span class="line">echo $&#123;STRING[@]//be/eat&#125;        # to eat or not to eat</span><br></pre></td></tr></table></figure>
+
+<p>删除所有匹配子字符串</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STRING=&quot;to be or not to be&quot;</span><br><span class="line">echo $&#123;STRING[@]// not/&#125;        # to be or to be</span><br></pre></td></tr></table></figure>
+
+<p>替换从前往后匹配的第一个子字符串</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STRING=&quot;to be or not to be&quot;</span><br><span class="line">echo $&#123;STRING[@]/#to be/eat now&#125;    # eat now or not to be</span><br></pre></td></tr></table></figure>
+
+<p>替换从后往前匹配的第一个子字符串</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STRING=&quot;to be or not to be&quot;</span><br><span class="line">echo $&#123;STRING[@]/%be/eat&#125;        # to be or not to eat</span><br></pre></td></tr></table></figure>
+
+<p>用命令结果替换从后往前匹配的第一个子字符串</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">STRING=&quot;to be or not to be&quot;</span><br><span class="line">echo $&#123;STRING[@]/%be/be on $(date +%Y-%m-%d)&#125;    # to be or not to be on 2012-06-14</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="分支结构"><a href="#分支结构" class="headerlink" title="分支结构"></a>分支结构</h2><p>if结构</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if [ expression ]; then</span><br><span class="line"></span><br><span class="line">code if &#x27;expression&#x27; is true</span><br><span class="line"></span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">NAME=&quot;George&quot;</span><br><span class="line">if [ &quot;$NAME&quot; = &quot;John&quot; ]; then</span><br><span class="line">  echo &quot;John Lennon&quot;</span><br><span class="line">elif [ &quot;$NAME&quot; = &quot;George&quot; ]; then</span><br><span class="line">  echo &quot;George Harrison&quot;</span><br><span class="line">else</span><br><span class="line">  echo &quot;This leaves us with Paul and Ringo&quot;</span><br><span class="line">fi</span><br></pre></td></tr></table></figure>
+
+<p>判断表达式可以是一个字符串或者变量。空字符串、有空格的字符串和未定义的变量名会被当做<code>false</code>，表达式可以用逻辑符号。</p>
+<p>数字比较运算</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">comparison    Evaluated to true when</span><br><span class="line"><span class="meta">$</span><span class="bash">a -lt <span class="variable">$b</span>    <span class="variable">$a</span> &lt; <span class="variable">$b</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash">a -gt <span class="variable">$b</span>    <span class="variable">$a</span> &gt; <span class="variable">$b</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash">a -le <span class="variable">$b</span>    <span class="variable">$a</span> &lt;= <span class="variable">$b</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash">a -ge <span class="variable">$b</span>    <span class="variable">$a</span> &gt;= <span class="variable">$b</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash">a -eq <span class="variable">$b</span>    <span class="variable">$a</span> is equal to <span class="variable">$b</span></span></span><br><span class="line"><span class="meta">$</span><span class="bash">a -ne <span class="variable">$b</span>    <span class="variable">$a</span> is not equal to <span class="variable">$b</span></span></span><br></pre></td></tr></table></figure>
+
+<p>字符串比较</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">comparison    Evaluated to true when</span><br><span class="line">&quot;$a&quot; = &quot;$b&quot;     $a is the same as $b</span><br><span class="line">&quot;$a&quot; == &quot;$b&quot;    $a is the same as $b</span><br><span class="line">&quot;$a&quot; != &quot;$b&quot;    $a is different from $b</span><br><span class="line">-z &quot;$a&quot;         $a is empty</span><br></pre></td></tr></table></figure>
+
+<p><code>=</code>两边要有空格，字符串用<code>&quot;&quot;</code>包裹。</p>
+<p>case结构</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">case &quot;$variable&quot; in</span><br><span class="line">    &quot;$condition1&quot; )</span><br><span class="line">        command...</span><br><span class="line">    ;;</span><br><span class="line">    &quot;$condition2&quot; )</span><br><span class="line">        command...</span><br><span class="line">    ;;</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+
+<p>例子</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mycase=1</span><br><span class="line">case $mycase in</span><br><span class="line">    1) echo &quot;You selected bash&quot;;;</span><br><span class="line">    2) echo &quot;You selected perl&quot;;;</span><br><span class="line">    3) echo &quot;You selected phyton&quot;;;</span><br><span class="line">    4) echo &quot;You selected c++&quot;;;</span><br><span class="line">    5) exit</span><br><span class="line">esac</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="循环结构"><a href="#循环结构" class="headerlink" title="循环结构"></a>循环结构</h2><p>for</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> basic construct</span></span><br><span class="line">for arg in [list]</span><br><span class="line">do</span><br><span class="line"> command(s)...</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> loop on array member</span></span><br><span class="line">NAMES=(Joe Jenny Sara Tony)</span><br><span class="line">for N in $&#123;NAMES[@]&#125; ; do</span><br><span class="line">  echo &quot;My name is $N&quot;</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> loop on <span class="built_in">command</span> output results</span></span><br><span class="line">for f in $( ls prog.sh /etc/localtime ) ; do</span><br><span class="line">  echo &quot;File is: $f&quot;</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p>while</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> basic construct</span></span><br><span class="line">while [ condition ]</span><br><span class="line">do</span><br><span class="line"> command(s)...</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">COUNT=4</span><br><span class="line">while [ $COUNT -gt 0 ]; do</span><br><span class="line">  echo &quot;Value of count is: $COUNT&quot;</span><br><span class="line">  COUNT=$(($COUNT - 1))</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p>until</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> basic construct</span></span><br><span class="line">until [ condition ]</span><br><span class="line">do</span><br><span class="line"> command(s)...</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">COUNT=1</span><br><span class="line">until [ $COUNT -gt 5 ]; do</span><br><span class="line">  echo &quot;Value of count is: $COUNT&quot;</span><br><span class="line">  COUNT=$(($COUNT + 1))</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p>continue &amp; break</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> Prints out 0,1,2,3,4</span></span><br><span class="line"></span><br><span class="line">COUNT=0</span><br><span class="line">while [ $COUNT -ge 0 ]; do</span><br><span class="line">  echo &quot;Value of COUNT is: $COUNT&quot;</span><br><span class="line">  COUNT=$((COUNT+1))</span><br><span class="line">  if [ $COUNT -ge 5 ] ; then</span><br><span class="line">    break</span><br><span class="line">  fi</span><br><span class="line">done</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> Prints out only odd numbers - 1,3,5,7,9</span></span><br><span class="line">COUNT=0</span><br><span class="line">while [ $COUNT -lt 10 ]; do</span><br><span class="line">  COUNT=$((COUNT+1))</span><br><span class="line"><span class="meta">  #</span><span class="bash"> Check <span class="keyword">if</span> COUNT is even</span></span><br><span class="line">  if [ $(($COUNT % 2)) = 0 ] ; then</span><br><span class="line">    continue</span><br><span class="line">  fi</span><br><span class="line">  echo $COUNT</span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>结构</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash"> basic construct</span></span><br><span class="line">function_name &#123;</span><br><span class="line">  command...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>调用，传递参数，使用参数索引下标从1开始</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">function function_B &#123;</span><br><span class="line">  echo &quot;Function B.&quot;</span><br><span class="line">&#125;</span><br><span class="line">function function_A &#123;</span><br><span class="line">  echo &quot;$1&quot;</span><br><span class="line">&#125;</span><br><span class="line">function adder &#123;</span><br><span class="line">  echo &quot;$(($1 + $2))&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#</span><span class="bash"> FUNCTION CALLS</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> Pass parameter to <span class="keyword">function</span> A</span></span><br><span class="line">function_A &quot;Function A.&quot;     # Function A.</span><br><span class="line">function_B                   # Function B.</span><br><span class="line"><span class="meta">#</span><span class="bash"> Pass two parameters to <span class="keyword">function</span> adder</span></span><br><span class="line">adder 12 56                  # 68</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="特殊的引用变量"><a href="#特殊的引用变量" class="headerlink" title="特殊的引用变量"></a>特殊的引用变量</h2><ul>
+<li><code>$0</code> - The filename of the current script.|</li>
+<li><code>$n</code> - The Nth argument passed to script was invoked or function was called.|</li>
+<li><code>$#</code> - The number of argument passed to script or function.|</li>
+<li><code>$@</code> - All arguments passed to script or function.|</li>
+<li><code>$*</code> - All arguments passed to script or function.|</li>
+<li><code>$?</code> - The exit status of the last command executed.|</li>
+<li><code>$$</code> - The process ID of the current shell. For shell scripts, this is the process ID under which they are executing.|</li>
+<li><code>$!</code> - The process number of the last background command.|</li>
+</ul>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">echo &quot;Script Name: $0&quot;</span><br><span class="line">function func &#123;</span><br><span class="line">    for var in $*</span><br><span class="line">    do</span><br><span class="line">        let i=i+1</span><br><span class="line">        echo &quot;The \$$&#123;i&#125; argument is: $&#123;var&#125;&quot;</span><br><span class="line">    done</span><br><span class="line">    echo &quot;Total count of arguments: $#&quot;</span><br><span class="line">&#125;</span><br><span class="line">func We are argument</span><br></pre></td></tr></table></figure>
+
+<p><code>$@</code> and <code>$*</code> have different behavior when they were enclosed in double quotes.</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line">function func &#123;</span><br><span class="line">    echo &quot;--- \&quot;\$*\&quot;&quot;</span><br><span class="line">    for ARG in &quot;$*&quot;</span><br><span class="line">    do</span><br><span class="line">        echo $ARG</span><br><span class="line">    done</span><br><span class="line"></span><br><span class="line">    echo &quot;--- \&quot;\$@\&quot;&quot;</span><br><span class="line">    for ARG in &quot;$@&quot;</span><br><span class="line">    do</span><br><span class="line">        echo $ARG</span><br><span class="line">    done</span><br><span class="line">&#125;</span><br><span class="line">func We are argument</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Trap-命令"><a href="#Trap-命令" class="headerlink" title="Trap 命令"></a>Trap 命令</h2><p><code>trap</code>命令用于脚本接收特殊的信号、中断、用户输入来避免出现不可预测的情况。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trap &lt;arg/function&gt; &lt;signal&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">!/bin/bash</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> traptest.sh</span></span><br><span class="line"><span class="meta">#</span><span class="bash"> notice you cannot make Ctrl-C work <span class="keyword">in</span> this shell,</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> try with your <span class="built_in">local</span> one, also remeber to chmod +x</span> </span><br><span class="line"><span class="meta">#</span><span class="bash"> your <span class="built_in">local</span> .sh file so you can execute it!</span></span><br><span class="line"></span><br><span class="line">trap &quot;echo Booh!&quot; SIGINT SIGTERM</span><br><span class="line">echo &quot;it&#x27;s going to run until you hit Ctrl+Z&quot;</span><br><span class="line">echo &quot;hit Ctrl+C to be blown away!&quot;</span><br><span class="line"></span><br><span class="line">while true        </span><br><span class="line">do</span><br><span class="line">    sleep 60       </span><br><span class="line">done</span><br></pre></td></tr></table></figure>
+
+<p>可以捕获的信号类型:</p>
+<ul>
+<li><code>SIGINT</code>: user sends an interrupt signal (Ctrl + C)</li>
+<li><code>SIGQUIT</code>: user sends a quit signal (Ctrl + C)</li>
+<li><code>SIGFPE</code>: attempted an illegal mathematical operation</li>
+</ul>
+<p>下面这个命令可以查看全部的信号</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -l</span><br></pre></td></tr></table></figure>
+
+<p>结果如下</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> 1) SIGHUP	 2) SIGINT	 3) SIGQUIT	 4) SIGILL	 5) SIGTRAP</span><br><span class="line"> 6) SIGABRT	 7) SIGBUS	 8) SIGFPE	 9) SIGKILL	10) SIGUSR1</span><br><span class="line">11) SIGSEGV	12) SIGUSR2	13) SIGPIPE	14) SIGALRM	15) SIGTERM</span><br><span class="line">16) SIGSTKFLT	17) SIGCHLD	18) SIGCONT	19) SIGSTOP	20) SIGTSTP</span><br><span class="line">21) SIGTTIN	22) SIGTTOU	23) SIGURG	24) SIGXCPU	25) SIGXFSZ</span><br><span class="line">26) SIGVTALRM	27) SIGPROF	28) SIGWINCH	29) SIGIO	30) SIGPWR</span><br><span class="line">31) SIGSYS	34) SIGRTMIN	35) SIGRTMIN+1	36) SIGRTMIN+2	37) SIGRTMIN+3</span><br><span class="line">38) SIGRTMIN+4	39) SIGRTMIN+5	40) SIGRTMIN+6	41) SIGRTMIN+7	42) SIGRTMIN+8</span><br><span class="line">43) SIGRTMIN+9	44) SIGRTMIN+10	45) SIGRTMIN+11	46) SIGRTMIN+12	47) SIGRTMIN+13</span><br><span class="line">48) SIGRTMIN+14	49) SIGRTMIN+15	50) SIGRTMAX-14	51) SIGRTMAX-13	52) SIGRTMAX-12</span><br><span class="line">53) SIGRTMAX-11	54) SIGRTMAX-10	55) SIGRTMAX-9	56) SIGRTMAX-8	57) SIGRTMAX-7</span><br><span class="line">58) SIGRTMAX-6	59) SIGRTMAX-5	60) SIGRTMAX-4	61) SIGRTMAX-3	62) SIGRTMAX-2</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>可以通过数字替代信号名</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#</span><span class="bash">2 corresponds to SIGINT and 15 corresponds to SIGTERM</span></span><br><span class="line">trap booh 2 15</span><br></pre></td></tr></table></figure>
+
+<p>常用情景，删除临时文件</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">trap &quot;rm -f folder; exit&quot; 2</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+	
+		</div>
+		
+		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
+
+		<!-- relate post, comment...-->
+		<div class="investment-container">
+			<div class="investment-header">
+				<div class="investment-title-1">
+					<div class="on">相关文章</div>
+					<div>评论</div>
+					<div>分享</div>
+				</div>
+				<div class="investment-title-2">	            
+					
+	<span>
+		<a id="totop-post-page">返回顶部</a>
+		
+			<a href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" title="shell 命令2" rel="prev">
+				&laquo;上一篇
+			</a>
+		
+		
+			<a href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" title="Vimtutor 总结" rel="next">
+				下一篇&raquo;
+			</a>
+			
+	</span>
+
+
+      		
+				</div>	
+			</div>
+			
+			<div class="investment-content">
+				<div class="investment-content-list">
+					
+
+<div class="relate-post">
+	
+		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" title="shell 命令2">
+								shell 命令2			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十二月 1日, 2020				
+							</p>
+							<p class="relate-post-content">
+								主要内容总结：
+ps和top命令在判断系统的状态时特别重要，能看到哪些应用在运行以及它们消耗了多少资源。mount命令可以将一个物理存储设备挂载到Linux虚拟目录结构上。umount命令用来移除设备。sort工具能轻松地对大数据文件...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" title="shell 命令2">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="shell 命令2"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令">
+								Shell 基本命令			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 25日, 2020				
+							</p>
+							<p class="relate-post-content">
+								基础命令小结bash手册man命令用来访问存储在Linux系统上的手册页面。在想要查找的工具的名称前面输入man命令，就可以找到那个工具相应的手册条目。
+当使用man命令查看命令手册页的时候，这些手册页是由分页程序（pager）来显示...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Shell 基本命令"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" title="Vimtutor 总结">
+								Vimtutor 总结			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十二月 1日, 2020				
+							</p>
+							<p class="relate-post-content">
+								Vim是一款文字编辑器，又被称为编辑器之神，这是来自vimtutor的教程的简单小结。在Linux系统中输入vimtutor即可进入教程。
+第一讲小结
+  光标在屏幕文本中的移动既可以用箭头键，也可以使用 hjkl 字母键。h (左移...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" title="Vimtutor 总结">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Vimtutor 总结"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/11/25/Blog-%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/" title="Blog 搭建相关技术">
+								Blog 搭建相关技术			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 25日, 2020				
+							</p>
+							<p class="relate-post-content">
+								简单回顾搭建博客时使用到的技术
+
+使用Hexo 把Markdown文件转化为静态页面
+设置Hexo主题Annie
+部署到Github
+购买域名并解析到Github提供的服务
+图床搭建——Github 仓库存储图片，jsDelivr 提...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/11/25/Blog-%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/" title="Blog 搭建相关技术">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Blog 搭建相关技术"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/11/24/Redis-%E5%AF%B9%E8%B1%A1/" title="Redis 对象">
+								Redis 对象			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 24日, 2020				
+							</p>
+							<p class="relate-post-content">
+								摘要对象是对数据结构的使用，前面介绍了六种主要的数据结构，Redis并没有直接使用这些数据结构，而是基于这些数据结构创建了一个对象系统，这个系统包含字符串对象，列表对象、哈希对象、集合对象和有序集合对象五种类型，每种类型都用到了至少一...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/11/24/Redis-%E5%AF%B9%E8%B1%A1/" title="Redis 对象">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Redis 对象"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/11/24/Redis-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="Redis 数据结构">
+								Redis 数据结构			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 24日, 2020				
+							</p>
+							<p class="relate-post-content">
+								摘要总结Redis中使用到的存储数据结构。
+SDSRedis没有直接使用C语言的字符串，而是引入了简单动态字符串（simple dynamic string，SDS）作为Redis的默认字符串表示。
+在Redis中，C字符串只会作为字...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/11/24/Redis-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/" title="Redis 数据结构">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Redis 数据结构"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/11/23/%E4%BD%BF%E7%94%A8Flume%E5%B0%86Kafka%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5Hive/" title="使用Flume将Kafka中的数据导入Hive">
+								使用Flume将Kafka中的数据导入Hive			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 23日, 2020				
+							</p>
+							<p class="relate-post-content">
+								使用Flume将Kafka中的数据导入Hive参考Flume介绍以及测试配置文件编写：Flume架构以及应用介绍
+主要的配置信息：使用Flume将Kafka中的数据导入Hive
+遇到的两个错误的解决方案：Flume输出到hive错误
+...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/11/23/%E4%BD%BF%E7%94%A8Flume%E5%B0%86Kafka%E4%B8%AD%E7%9A%84%E6%95%B0%E6%8D%AE%E5%AF%BC%E5%85%A5Hive/" title="使用Flume将Kafka中的数据导入Hive">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="使用Flume将Kafka中的数据导入Hive"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/11/21/%E9%9A%8F%E7%AC%94%E4%B8%80%E5%88%99/" title="随笔一则">
+								随笔一则			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 21日, 2020				
+							</p>
+							<p class="relate-post-content">
+								​    此文原作于2020.06.02，今日略做修改，作为博客的第一篇文章。
+​    思来想去，能够拯救自己的，也就只有自己了。太多的难过积攒在心中，无人诉说，也不知如何诉说，隐隐的难过。两三日前，想起初中时，语文老师要求，单周写...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/11/21/%E9%9A%8F%E7%AC%94%E4%B8%80%E5%88%99/" title="随笔一则">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="随笔一则"/>
+							</a>
+						</div>
+					</li>												
+			
+		</ul>
+	
+</div>	
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-comment">
+
+	
+
+		
+
+			<!-- gitalk comment -->
+			<!-- show gitalk comment -->
+<div id="gitalk-container"></div>
+
+<!-- gitalk`s css & js -->
+<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<link rel="stylesheet" href="/css/comment.css">
+<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<script type="text/javascript">
+
+	(function gitalkComment(){
+		//Thanks O-R
+		//https://github.com/gitalk/gitalk/issues/102#issuecomment-382970552
+		//去除尾部匹配正则数组的字符串  
+		//Remove redundant characters
+		String.prototype.trimEnd = function(regStr) {
+			let result = this;
+			if(regStr == undefined || regStr == null || regStr == "") {
+				return result;
+			}
+			let array = regStr.split(',');
+
+			if(array.length > 0) {
+
+				let c = array.shift(), 
+					str = this,
+					i = str.length,
+					rg = new RegExp(c),
+					matchArr = str.match(rg);
+
+				if(matchArr != undefined && matchArr != null && matchArr.length > 0) {
+					let matchStr = matchArr[0].replace(/\\/g, "\\\\").replace(/\*/g, "\\*")
+						.replace(/\+/g, "\\+").replace(/\|/g, "\\|")
+						.replace(/\{/g, "\\{").replace(/\}/g, "\\}")
+						.replace(/\(/g, "\\(").replace(/\)/g, "\\)")
+						.replace(/\^/g, "\\^").replace(/\$/g, "\\$")
+						.replace(/\[/g, "\\[").replace(/\]/g, "\\]")
+						.replace(/\?/g, "\\?").replace(/\,/g, "\\,")
+						.replace(/\./g, "\\.").replace(/\&/g, "\\&");
+					matchStr = matchStr + '$';
+					result = str.replace(new RegExp(matchStr), "");
+				}
+
+				if(array.length > 0) {
+					return result.trimEnd(array.join())
+				} else {
+					return result;
+				}
+			}
+		};
+
+		//Create gitalk
+		let gitalk = new Gitalk({
+			clientID: '80c8128aee08f2a7ff89',
+			clientSecret: '06900dafdc4e16a3de658261415ac290a9f3d550',
+			//id: window.location.pathname,
+			//id: decodeURI(window.location.pathname),
+			//id: (window.location.pathname).split("/").pop().substring(0, 49),
+			id: decodeURI( md5( location.href.trimEnd('#.*$,\\?.*$,index.html$') ) ),
+			repo: 'Blog-Comment-Repo',
+			owner: 'jakedufe',
+			admin: 'jakedufe',
+			distractionFreeMode: 'true',
+		})
+		gitalk.render('gitalk-container');		
+	})();
+</script>
+
+		
+		
+	
+
+</div>
+				</div>
+				<div class="investment-content-list">
+					<div class="layout-share">
+	
+	
+
+		
+			
+			<!-- socialShare share -->
+			<div class="social-share"></div>
+
+<!--  css & js -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+			
+		
+		
+	
+</div>
+
+
+				</div>
+			</div>	
+		</div>
+	</div>
+</div>
+
+<!-- show math formula -->
+
+
+
+	 
+	
+<script src="/plugin/clipboard/clipboard.js"></script>
+
+	<script>
+		// Copy code !
+	    function preprocessing() {
+	        $("#article-content .highlight").each(function() {
+	            $(this).wrap('<div id="post-code"></div>');
+	        })
+
+	        $("#article-content #post-code").each(function() {
+	            $(this).prepend('<nav class="copy-nav"><span><i class="code-language"></i></span></nav>');
+	        })
+
+	        $("#article-content .copy-nav").each(function() {
+	            let languageClass = $(this).next().attr('class'),
+	                language = ((languageClass.length > 9) && (languageClass != null)) ? languageClass.substr(10) : "none"; //why 9? Need to check language?
+
+	            $(this).find('.code-language').text(language);
+	            $(this).append('<span class="copy-btn icon-paste"></span>');
+	        });
+	    }
+
+		function copy() {
+		    $('#article-content #post-code').each(function(i) {
+		        let codeCopyId = 'codeCopy-' + i;
+
+		        let codeNode = $(this).find('.code'),
+		            copyButton = $(this).find('.copy-btn');
+
+		        codeNode.attr('id', codeCopyId);
+		        copyButton.attr('data-clipboard-target-id', codeCopyId);
+		    })
+   
+			let clipboard = new ClipboardJS('.copy-btn', {
+					target: function(trigger) {
+						return document.getElementById(trigger.getAttribute('data-clipboard-target-id'));
+					}
+		      	});
+
+			//pure js
+			function showTooltip(elem, msg) {		   
+				elem.setAttribute('aria-label', msg);
+				elem.setAttribute('class', 'copy-btn icon-clipboard1');
+				setTimeout(function() {
+					elem.setAttribute('class', 'copy-btn icon-paste');
+				}, 2000);
+			}
+
+			clipboard.on('success', function(e) {
+			    e.clearSelection();
+			    console.info('Action:', e.action);		   
+			    console.info('Trigger:', e.trigger);
+			    showTooltip(e.trigger, 'Copied!');   
+			});
+			
+			clipboard.on('error', function(e) {
+			    console.error('Action:', e.action);
+			    console.error('Trigger:', e.trigger);
+			});
+		}
+		
+		(function copyCode(){
+			if ($('.layout-post').length) {
+			    preprocessing();
+			    copy();
+			} 
+		})();
+	</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="/plugin/fancybox/jquery.fancybox.css">
+
+
+<script src="/plugin/fancybox/jquery.fancybox.js"></script>
+
+
+<script type="text/javascript">
+	(function gallerySet(){
+		let titleID = $('.article-title a'),
+			imageID = $('.article-content img'),
+			videoID = $('.article-content video');
+		
+		let postTitle = titleID.text() ? titleID.text() : "No post title!";
+		
+		imageID.each(function() {
+			let imgPath = $(this).attr('src'),
+				imgTitle = $(this).attr('alt') ? $(this).attr('alt') : "No image description!";
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox="gallery" data-caption="《 ' + postTitle + ' 》' + imgTitle + '"href="' + imgPath + '"> </a>');
+		});
+		
+		videoID.each(function() {
+			let videoPath = $(this).attr('src');
+		
+			//给每个匹配的<img>元素打包, 即添加父元素<a>
+			$(this).wrap('<a data-fancybox href=" ' + videoPath + ' "> </a>');
+		});
+		
+		//TODO：支持html5 video
+
+		if($('#layout-post').length) {
+			$('[data-fancybox="gallery"]').fancybox({
+				loop: true,
+				buttons: [
+					"zoom",
+					"share",
+					"slideShow",
+					"fullScreen",
+					//"download",
+					"thumbs",
+					"close"
+				],
+				protect: true
+			});
+		}
+	})();
+</script>
+		</main>
+
+		<!--footer-->
+		<footer>
+	<div id="navigation-show">
+		<ul id="global-nav">
+	
+		<li class="menu-home">
+			<a href="/" class="menu-item-home" target="_blank">主页</a>
+		</li>
+		
+	
+		<li class="menu-archive">
+			<a href="/archives" class="menu-item-archive" target="_blank">归档</a>
+		</li>
+		
+	
+		<li class="menu-categories">
+			<a href="/categories" class="menu-item-categories" target="_blank">分类</a>
+		</li>
+		
+	
+		<li class="menu-tags">
+			<a href="/tags" class="menu-item-tags" target="_blank">标签</a>
+		</li>
+		
+	
+		<li class="menu-about">
+			<a href="/about" class="menu-item-about" target="_blank">关于</a>
+		</li>
+		
+	
+		<li class="menu-gallery">
+			<a href="/gallery" class="menu-item-gallery" target="_blank">相册</a>
+		</li>
+		
+	
+
+	
+		<li class="menu-search">
+			<a href="javascript:;" class="popup-trigger">搜索</a>
+		</li>
+	
+</ul>
+	</div>
+
+	<div class="copyright">
+		<p>
+			 
+				&copy;2020, content by Jake. All Rights Reserved.
+			
+			
+				<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.
+			
+		</p>
+		<p>
+			
+
+	<!-- busuanzi -->
+	<!-- busuanzi -->
+
+
+
+			<a href="javascript:zh_tran('s');" class="zh_click" id="zh_click_s">简体</a> 
+			<a href="javascript:zh_tran('t');" class="zh_click" id="zh_click_t">繁體</a>				
+		</p>
+	</div>		
+</footer>
+		
+	<!-- Local or hitokoto! -->
+
+	
+<script src="/plugin/motto/motto.js"></script>
+
+	
+	<script type="text/javascript">
+		(function motto(){
+			let mottoText = getMingYanContent().split('</br> - </br>'),
+			
+			mottoTextContent = mottoText[0]?mottoText[0]:'请刷新...',
+			
+			mottoTextFrom = mottoText[1]?mottoText[1]:'one/一个';
+			
+			mottoTextContent = mottoTextContent.trim().substring(0, 100);
+		
+			$("#motto-content").html( mottoTextContent);
+			$("#motto-author").html( mottoTextFrom  );
+		})();	
+	</script>	
+
+
+
+<!-- love effect -->
+
+	
+<script src="/plugin/love/love.js"></script>
+
+
+
+<!-- back to top -->
+
+	<div id="totop">
+	<span class="icon-circle-up"></span>
+</div>
+
+
+
+<!-- site analysis -->
+
+
+	<!-- site-analysis -->
+	
+	
+	
+	
+	
+ 
+
+<!-- leancloud -->
+
+
+	<!-- leancloud -->
+	<!--
+	时间：2018-11-27
+	描述：
+		文章访问量：visitors
+		文章喜欢量：likes	
+		文章排行榜：topNPost
+		其他得说明：
+			01-Cookie相关的函数 
+				https://blog.csdn.net/somehow1002/article/details/78511541（Author：somehow1002）
+			02-visitors相关的函数 
+				https://blog.csdn.net/u013553529/article/details/63357382（Author：爱博客大伯）
+				https://notes.doublemine.me/2015-10-21-为NexT主题添加文章阅读量统计功能.html（Author：夏末）
+			03-topNPost相关的函数
+				https://hoxis.github.io/hexo-next-read-rank.html（Author：hoxis）
+			04-likes相关的函数，
+				参考了01 & 02进行简单的设计与实现
+-->
+
+
+  
+<script src="/plugin/leancloud/av-min.js"></script>
+<script src="/js/leancloud-count.js"></script>
+
+
+	
+
+  
+
+	<!--
+	时间：2018-10-3
+	描述：
+		插件名称：hexo-generator-search-zip
+		插件来源: https://github.com/SuperKieran/hexo-generator-search-zip
+		代码参考：https://github.com/SuperKieran/TKL/blob/master/layout/_partial/search.ejs(Include: js & css)	
+-->
+<div class="popup search-popup local-search-popup scrollbar" >
+	<div class="local-search-container">
+		<span class="popup-btn-close">
+      		ESC
+   		</span>
+		<div class="local-search-header">
+			<div class="input-prompt">				
+			</div>
+			<input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+		</div>
+		<div class="local-search-body">
+			<div id="local-search-output"></div>
+		</div>
+		<div class="local-search-footer">
+			<div class="topN-post">				
+				
+
+   
+	<div id="topN">
+		<div class="topN-title" data-title= "热门文章"></div> 
+	</div>
+	
+    <script>
+        var limitCount = 10;
+        if( $('#topN').length ){
+            setTimeout(function() {
+                topNPost(limitCount);
+			}, 3000);
+        }
+    </script>
+   
+								
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<script src="/plugin/search/ziploader.js"></script>
+<script src="/js/search.js"></script>
+
+
+<script type="text/javascript">
+	var search_path = 'search.json',
+		zip_Path = '/search.zip',
+		version_Path = '/searchVersion.txt',
+		input_Trigger = 'auto',
+		top_N = '2';
+
+	themeLocalSearch({
+		search_path, 
+		zip_Path, 
+		version_Path, 
+		input_Trigger, 
+		top_N
+	});
+</script>
+
+
+
+<script src="/plugin/chinese/chinese.js"></script>
+<script src="/plugin/imagelazyloader/yall.min.js"></script>
+<script src="/plugin/imageloaded/imagesloaded.pkgd.min.js"></script>
+<script src="/plugin/nicescroll/jquery.nicescroll.js"></script>
+<script src="/plugin/resizediv/resizediv.js"></script>
+<script src="/js/main.js"></script>
+
+	</body>	
+</html>

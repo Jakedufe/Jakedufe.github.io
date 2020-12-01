@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Shell 基本命令 | Jake&#39;Blog
+      Vimtutor 总结 | Jake&#39;Blog
     
   </title>
   <meta name="author" content="Jake">
@@ -102,7 +102,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「Shell 基本命令」
+			「Vimtutor 总结」
 		
 	</p>
 
@@ -252,8 +252,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" itemprop="url">
-		Shell 基本命令
+	<a href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" itemprop="url">
+		Vimtutor 总结
 	</a>
 
 		</div>
@@ -269,9 +269,9 @@
 
 	更新于
 
-	<a href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" itemprop="url">
-		<time datetime="2020-11-25T13:33:36.000Z" itemprop="dateUpdated">
-	  		2020-11-25
+	<a href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" itemprop="url">
+		<time datetime="2020-12-01T06:25:38.000Z" itemprop="dateUpdated">
+	  		2020-12-01
 	  </time>
 	</a> 
 
@@ -282,8 +282,8 @@
 				
 	<i class="icon-price-tags"></i>
 	
-		<a href="/tags/shell/" class=" ">
-			shell
+		<a href="/tags/Vim/" class=" ">
+			Vim
 		</a>
 	
 		
@@ -292,7 +292,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/_visitors" data-url="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-title="Shell 基本命令">
+    <span class="leancloud_visitors" id="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/_visitors" data-url="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" data-title="Vimtutor 总结">
        	<i class="icon-eye"></i>
        	热度
         
@@ -304,7 +304,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/_likes" data-url="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" data-title="Shell 基本命令" rel="unlike">
+    <span class="leancloud_likes" id="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/_likes" data-url="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" data-title="Vimtutor 总结" rel="unlike">
         <i class="icon-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -314,98 +314,108 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<h2 id="基础命令小结"><a href="#基础命令小结" class="headerlink" title="基础命令小结"></a>基础命令小结</h2><h3 id="bash手册"><a href="#bash手册" class="headerlink" title="bash手册"></a>bash手册</h3><p>man命令用来访问存储在Linux系统上的手册页面。在想要查找的工具的名称前面输入man命令，就可以找到那个工具相应的手册条目。</p>
-<p>当使用man命令查看命令手册页的时候，这些手册页是由分页程序（pager）来显示的。分页程序是一种实用工具，能够逐页显示文本。可以通过点击空格键进行翻页，或是使用回车键逐行查看。另外还可以使用箭头键向前向后滚动手册页的内容。</p>
-<p>手册页将与命令相关的信息分成了不同的节。每一节惯用的命名标准如表3-1所示。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@c6a4475ed7822909a8a3a0450c8b895842a62d99/2020/11/25/242e041b54b4f35832be5dc0b1125d51.png" alt="image-20201125214147459"></p>
-<p>除了对节按照惯例进行命名，手册页还有对应的内容区域。每个内容区域都分配了一个数字，从1开始，一直到9，如表3-2所示。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@be512acde46baf1275c380e298c273e8f60cb31a/2020/11/25/7dfe6103f144a857210409deb282261c.png" alt="image-20201125214535651"></p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@443949bcb879d59dc02c18cf11dd8b5fb49860d0/2020/11/25/5f0d677993247281f1bac9ffe0812f1a.png" alt="image-20201125214551284"></p>
-<p>man工具通常提供的是命令所对应的最低编号的内容。</p>
-<p>手册页不是唯一的参考资料。还有另一种叫作info页面的信息。可以输入info info来了解info页面的相关内容。<br>另外，大多数命令都可以接受-help或–help选项。</p>
-<h3 id="浏览文件系统"><a href="#浏览文件系统" class="headerlink" title="浏览文件系统"></a>浏览文件系统</h3><h4 id="Linux-文件系统"><a href="#Linux-文件系统" class="headerlink" title="Linux 文件系统"></a>Linux 文件系统</h4><p>Linux将文件存储在单个目录结构中，这个目录被称为虚拟目录（virtual directory）。虚拟目录将安装在PC上的所有存储设备的文件路径纳入单个目录结构中。<br>Linux虚拟目录结构只包含一个称为根（root）目录的基础目录。根目录下的目录和文件会按照访问它们的目录路径一一列出。</p>
-<blockquote>
-<p>你将会发现Linux使用正斜线（/）而不是反斜线（\）在文件路径中划分目录。在Linux中，反斜线用来标识转义字符，要是用在文件路径中的话会导致各种各样的问题。</p>
-</blockquote>
-<p>要注意的是，路径本身并没有提供任何有关文件究竟存放在哪个物理磁盘上的信息。<br>Linux虚拟目录中比较复杂的部分是它如何协调管理各个存储设备。在Linux PC上安装的第一块硬盘称为根驱动器。根驱动器包含了虚拟目录的核心，其他目录都是从那里开始构建的。<br>Linux会在根驱动器上创建一些特别的目录，我们称之为挂载点（mount point）。挂载点是虚拟目录中用于分配额外存储设备的目录。虚拟目录会让文件和目录出现在这些挂载点目录中，然而实际上它们却存储在另外一个驱动器中。<br>通常系统文件会存储在根驱动器中，而用户文件则存储在另一驱动器中，如图3-2所示。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@a367f2c27f7df9d46807387c7ca0b9af413670fb/2020/11/25/50ea84e85151a4349af393c39d012dd0.png" alt="image-20201125215013341"></p>
-<p>图3-2展示了计算机中的两块硬盘。一块硬盘和虚拟目录的根目录（由正斜线/表示）关联起来。剩下的硬盘就可以挂载到虚拟目录结构中的任何地方。在这个例子中，第二块硬盘被挂载到了/home位置，用户目录都位于这个位置。<br>Linux文件系统结构是从Unix文件结构演进过来的。在Linux文件系统中，通用的目录名用于表示一些常见的功能。表3-3列出了一些较常见的Linux顶层虚拟目录名及其内容。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@66e9ddf89ea0051e5a0505b55eee53c4100f45d7/2020/11/25/9341d729e659a7dc95d7cd00840e9f14.png" alt="image-20201125215340375"></p>
-<p>常见的目录名均基于文件系统层级标准（filesystem hierarchy standard，FHS）。很多Linux发行版都遵循了FHS。</p>
-<h4 id="遍历目录"><a href="#遍历目录" class="headerlink" title="遍历目录"></a>遍历目录</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd</span><br><span class="line">pwd</span><br></pre></td></tr></table></figure>
-
-<p>绝对文件路径总是以正斜线（/）作为起始，指明虚拟文件系统的根目录。</p>
-<p>相对文件路径允许用户指定一个基于当前位置的目标文件路径。相对文件路径不以代表根目录的正斜线（/）开头，而是以目录名（如果用户准备切换到当前工作目录下的一个目录）或是一个特殊字符开始。</p>
-<p>有两个特殊字符可用于相对文件路径中：<br> 单点符（.），表示当前目录；<br> 双点符（..），表示当前目录的父目录。</p>
-<h3 id="文件和目录列表"><a href="#文件和目录列表" class="headerlink" title="文件和目录列表"></a>文件和目录列表</h3><h4 id="基本列表功能"><a href="#基本列表功能" class="headerlink" title="基本列表功能"></a>基本列表功能</h4><p>注意，ls命令输出的列表是按字母排序的（按列排序而不是按行排序）。如果用户用的是支持彩色的终端仿真器，ls命令还可以用不同的颜色来区分不同类型的文件。LS_COLORS环境变量控制着这个功能。</p>
-<p>如果没安装彩色终端仿真器，可用带-F参数的ls命令轻松区分文件和目录。</p>
-<p>-F参数在目录名后加了正斜线（/），以方便用户在输出中分辨它们。类似地，它会在可执行文件（比如上面的my_script文件）的后面加个星号，以便用户找出可在系统上运行的文件。</p>
-<p>要把隐藏文件和普通文件及目录一起显示出来，就得用到-a参数。</p>
-<p>-R参数是ls命令可用的另一个参数，叫作递归选项。它列出了当前目录下包含的子目录中的文件。如果目录很多，这个输出就会很长。</p>
-<h4 id="显示长列表"><a href="#显示长列表" class="headerlink" title="显示长列表"></a>显示长列表</h4><p>在基本的输出列表中，ls命令并未输出太多每个文件的相关信息。要显示附加信息，另一个常用的参数是-l。-l参数会产生长列表格式的输出，包含了目录中每个文件的更多相关信息。</p>
-<p>这种长列表格式的输出在每一行中列出了单个文件或目录。除了文件名，输出中还有其他有用信息。输出的第一行显示了在目录中包含的总块数。在此之后，每一行都包含了关于文件（或目录）的下述信息：<br> 文件类型，比如目录（d）、文件（-）、字符型文件（c）或块设备（b）；<br> 文件的权限；<br> 文件的硬链接总数；<br> 文件属主的用户名；<br> 文件属组的组名；<br> 文件的大小（以字节为单位）；<br> 文件的上次修改时间；<br> 文件名或目录名。</p>
-<h4 id="过滤输出列表"><a href="#过滤输出列表" class="headerlink" title="过滤输出列表"></a>过滤输出列表</h4><p>这个过滤器就是一个进行简单文本匹配的字符串。可以在要用的命令行参数之后添加这个过滤器：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls -l my_script</span></span><br></pre></td></tr></table></figure>
-
-<p>ls命令能够识别标准通配符，并在过滤器中用它们进行模式匹配：<br> 问号（?）代表一个字符；<br> 星号（*）代表零个或多个字符。</p>
-<h3 id="处理文件"><a href="#处理文件" class="headerlink" title="处理文件"></a>处理文件</h3><h4 id="创建文件"><a href="#创建文件" class="headerlink" title="创建文件"></a>创建文件</h4><p>touch命令轻松创建空文件。</p>
-<p>touch命令创建了你指定的新文件，并将你的用户名作为文件的属主。注意，文件的大小是零，因为touch命令只创建了一个空文件。</p>
-<p>touch命令还可用来改变文件的修改时间。这个操作并不需要改变文件的内容。</p>
-<p>如果只想改变访问时间，可用-a参数。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> ls -l test_one</span></span><br><span class="line">-rw-rw-r-- 1 christine christine 0 May 21 14:35 test_one</span><br><span class="line"><span class="meta">$</span><span class="bash"> touch -a test_one</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -l test_one</span></span><br><span class="line">-rw-rw-r-- 1 christine christine 0 May 21 14:35 test_one</span><br><span class="line"><span class="meta">$</span><span class="bash"> ls -l --time=atime test_one</span></span><br><span class="line">-rw-rw-r-- 1 christine christine 0 May 21 14:55 test_one</span><br></pre></td></tr></table></figure>
-
-<p>要想查看文件的访问时间，需要加入另外一个参数：–time=atime。有了这个参数，就能够显示出已经更改过的文件访问时间。</p>
-<h4 id="复制文件"><a href="#复制文件" class="headerlink" title="复制文件"></a>复制文件</h4><p>在最基本的用法里，cp命令需要两个参数——源对象和目标对象：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp source destination</span><br></pre></td></tr></table></figure>
-
-<p>当source和destination参数都是文件名时，cp命令将源文件复制成一个新文件，并且以destination命名。新文件就像全新的文件一样，有新的修改时间。</p>
-<p>如果目标文件已经存在，cp命令可能并不会提醒这一点。最好是加上-i选项，强制shell询问是否需要覆盖已有文件。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cp -i test_one /home/jake/Documents/</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>之前的例子在目标目录名尾部加上了一个正斜线（/），这表明Documents是目录而非文件。这有助于明确目的，而且在复制单个文件时非常重要。如果没有使用正斜线，子目录/home/jake/Documents又不存在，就会有麻烦。在这种情况下，试图将一个文件复制到Documents子目录反而会创建一个名为Documents的文件，连错误消息都不会显示！</p>
-</blockquote>
-<p>本章在前面介绍了特殊符号可以用在相对文件路径中。其中的单点符（.）就很适合用于cp命令。记住，单点符表示当前工作目录。如果需要将一个带有很长的源对象名的文件复制到当前工作目录中时，单点符能够简化该任务。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cp -i /etc/NetworkManager/NetworkManager.conf .</span></span><br></pre></td></tr></table></figure>
-
-<p>cp命令的-R参数威力强大。可以用它在一条命令中递归地复制整个目录的内容。也可以在cp命令中使用通配符。</p>
-<h4 id="制表键自动补全"><a href="#制表键自动补全" class="headerlink" title="制表键自动补全"></a>制表键自动补全</h4><h4 id="链接文件"><a href="#链接文件" class="headerlink" title="链接文件"></a>链接文件</h4><p>链接文件是Linux文件系统的一个优势。如需要在系统上维护同一文件的两份或多份副本，除了保存多份单独的物理文件副本之外，还可以采用保存一份物理文件副本和多个虚拟副本的方法。这种虚拟的副本就称为链接。链接是目录中指向文件真实位置的占位符。在Linux中有两种不同类型的文件链接：<br> 符号链接<br> 硬链接</p>
-<p>符号链接就是一个实实在在的文件，它指向存放在虚拟目录结构中某个地方的另一个文件。</p>
-<p>这两个通过符号链接在一起的文件，彼此的内容并不相同。</p>
-<p>要为一个文件创建符号链接，原始文件必须事先存在。然后可以使用ln命令以及-s选项来创建符号链接。</p>
-<p>证明链接文件是独立文件的方法是查看<code>inode</code>编号。文件或目录的<code>inode</code>编号是一个用于标识的唯一数字，这个数字由内核分配给文件系统中的每一个对象。要查看文件或目录的<code>inode</code>编号，可以给ls命令加入-i参数。</p>
-<p>硬链接会创建独立的虚拟文件，其中包含了原始文件的信息及位置。但是它们从根本上而言是同一个文件。引用硬链接文件等同于引用了源文件。要创建硬链接，原始文件也必须事先存在，只不过这次使用ln命令时不再需要加入额外的参数了。</p>
-<blockquote>
-<p>只能对处于同一存储媒体的文件创建硬链接。要想在不同存储媒体的文件之间创建链接，只能使用符号链接。</p>
-</blockquote>
-<h4 id="重命名文件"><a href="#重命名文件" class="headerlink" title="重命名文件"></a>重命名文件</h4><p>mv命令可以将文件和目录移动到另一个位置或重新命名。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mv fall fzll</span></span><br><span class="line"><span class="meta">$</span><span class="bash"> mv fzll Pictures/</span></span><br><span class="line">mv命令移动整个目录及其内容。</span><br><span class="line"><span class="meta">$</span><span class="bash"> mv Mod_Scripts Old_Scripts</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>和cp命令类似，也可以在mv命令中使用-i参数。这样在命令试图覆盖已有的文件时，你就会得到提示。</p>
-</blockquote>
-<h4 id="删除文件"><a href="#删除文件" class="headerlink" title="删除文件"></a>删除文件</h4><p>在Linux中，删除（deleting）叫作移除（removing）。bash shell中删除文件的命令是<code>rm</code>。<code>rm</code>命令的基本格式非常简单。</p>
-<p>rm命令的另外一个特性是，如果要删除很多文件且不受提示符的打扰，可以用-f参数强制删除。</p>
-<h3 id="处理目录"><a href="#处理目录" class="headerlink" title="处理目录"></a>处理目录</h3><h4 id="创建目录"><a href="#创建目录" class="headerlink" title="创建目录"></a>创建目录</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> mkdir New_Dir</span></span><br><span class="line">要想同时创建多个目录和子目录，需要加入-p参数：</span><br><span class="line"><span class="meta">$</span><span class="bash"> mkdir -p New_Dir/Sub_Dir/Under_Dir</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="删除目录"><a href="#删除目录" class="headerlink" title="删除目录"></a>删除目录</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rmdir New_Dir</span></span><br><span class="line">rmdir: failed to remove &#x27;New_Dir&#x27;: Directory not empty</span><br></pre></td></tr></table></figure>
-
-<p>默认情况下，<code>rmdir</code>命令只删除空目录。因为我们在New_Dir目录下创建了一个文件my_file，所以<code>rmdir</code>命令拒绝删除目录。<br>要解决这一问题，得先把目录中的文件删掉，然后才能在空目录上使用rmdir命令。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rm -i New_Dir/my_file</span></span><br><span class="line">rm: remove regular empty file &#x27;New_Dir/my_file&#x27;? y</span><br><span class="line"><span class="meta">$</span></span><br><span class="line"><span class="bash">$ rmdir New_Dir</span></span><br></pre></td></tr></table></figure>
-
-<p>也可以在整个非空目录上使用<code>rm</code>命令。使用-r选项使得命令可以向下进入目录，删除其中的文件，然后再删除目录本身。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> rm -ir Small_Dir</span></span><br><span class="line">rm -rf命令既没有警告信息，也没有声音提示</span><br><span class="line"><span class="meta">$</span><span class="bash"> rm -rf Small_Dir</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看文件内容"><a href="#查看文件内容" class="headerlink" title="查看文件内容"></a>查看文件内容</h3><h4 id="查看文件类型"><a href="#查看文件类型" class="headerlink" title="查看文件类型"></a>查看文件类型</h4><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> file my_file</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="查看整个文件"><a href="#查看整个文件" class="headerlink" title="查看整个文件"></a>查看整个文件</h4><p>cat命令是显示文本文件中所有数据的得力工具。-n参数会给所有的行加上行号。如果只想给有文本的行加上行号，可以用-b参数。最后，如果不想让制表符出现，可以用-T参数。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span><span class="bash"> cat -T test1</span></span><br><span class="line">hello</span><br><span class="line">This is a test file.</span><br><span class="line">That we&#x27;ll use to^Itest the cat command.</span><br></pre></td></tr></table></figure>
-
-<p>-T参数会用^I字符组合去替换文中的所有制表符。</p>
-<p>cat命令的主要缺陷是：一旦运行，你就无法控制后面的操作。为了解决这个题，开发人员编写了more命令。more命令会显示文本文件的内容，但会在显示每页数据之后停下来。</p>
-<p>less命令的操作和more命令基本一样，一次显示一屏的文件文本。除了支持和more命令相同的命令集，它还包括更多的选项。</p>
-<h4 id="查看部分文件"><a href="#查看部分文件" class="headerlink" title="查看部分文件"></a>查看部分文件</h4><p>tail命令会显示文件最后几行的内容（文件的“尾部”）。默认情况下，它会显示文件的末尾10行。可以向tail命令中加入-n参数来修改所显示的行数。</p>
-<p>head命令，顾名思义，会显示文件开头那些行的内容。默认情况下，它会显示文件前10行的文本。</p>
+			<p>Vim是一款文字编辑器，又被称为编辑器之神，这是来自vimtutor的教程的简单小结。在Linux系统中输入<code>vimtutor</code>即可进入教程。</p>
+<h2 id="第一讲小结"><a href="#第一讲小结" class="headerlink" title="第一讲小结"></a>第一讲小结</h2><ul>
+<li><p><input disabled="" type="checkbox">  光标在屏幕文本中的移动既可以用箭头键，也可以使用 hjkl 字母键。<br>h (左移)    j (下行)       k (上行)        l (右移)</p>
+</li>
+<li><p><input disabled="" type="checkbox">  欲进入 Vim 编辑器(从命令行提示符)，请输入：vim 文件名 &lt;回车&gt;</p>
+</li>
+<li><p><input disabled="" type="checkbox">  欲退出 Vim 编辑器，请输入 <ESC>   :q!   &lt;回车&gt; 放弃所有改动。<br>  或者输入 <ESC>   :wq   &lt;回车&gt; 保存改动。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  在正常模式下删除光标所在位置的字符，请按： x</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  欲插入或添加文本，请输入：</p>
+<p>i   输入欲插入文本   <ESC>        在光标前插入文本<br> A   输入欲添加文本   <ESC>             在一行后添加文本</p>
+</li>
+</ul>
+<h2 id="第二讲小结"><a href="#第二讲小结" class="headerlink" title="第二讲小结"></a>第二讲小结</h2><ul>
+<li><p><input checked="" disabled="" type="checkbox">  欲从当前光标删除至下一个单词，请输入：dw</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  欲从当前光标删除至当前行末尾，请输入：d$</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  欲删除整行，请输入：dd</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  欲重复一个动作，请在它前面加上一个数字：2w</p>
+</li>
+<li><p><input disabled="" type="checkbox">  在正常模式下修改命令的格式是：<br>operator   [number]   motion<br>其中：<br>  operator - 操作符，代表要做的事情，比如 d 代表删除<br>  [number] - 可以附加的数字，代表动作重复的次数<br>  motion   - 动作，代表在所操作的文本上的移动，例如 w 代表单词(word)，</p>
+<pre><code>  $ 代表行末等等。</code></pre>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  欲移动光标到行首，请按数字0键：0</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  欲撤消以前的操作，请输入：u (小写的u)<br>欲撤消在一行中所做的改动，请输入：U (大写的U)<br>欲撤消以前的撤消命令，恢复以前的操作结果，请输入：CTRL-R</p>
+</li>
+</ul>
+<h2 id="第三讲小结"><a href="#第三讲小结" class="headerlink" title="第三讲小结"></a>第三讲小结</h2><ul>
+<li><p><input disabled="" type="checkbox">  要重新置入已经删除的文本内容，请按小写字母 p 键。该操作可以将已删除<br>的文本内容置于光标之后。如果最后一次删除的是一个整行，那么该行将置<br>于当前光标所在行的下一行。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  要替换光标所在位置的字符，请输入小写的 r 和要替换掉原位置字符的新字<br>符即可。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  更改类命令允许您改变从当前光标所在位置直到动作指示的位置中间的文本。<br>比如输入 ce 可以替换当前光标到单词的末尾的内容；输入 c$ 可以替换当<br>前光标到行末的内容。</p>
+</li>
+<li><p><input disabled="" type="checkbox">  更改类命令的格式是：</p>
+<p>c   [number]   motion</p>
+</li>
+</ul>
+<h2 id="第四讲小结"><a href="#第四讲小结" class="headerlink" title="第四讲小结"></a>第四讲小结</h2><ul>
+<li><p><input checked="" disabled="" type="checkbox">  CTRL-G 用于显示当前光标所在位置和文件状态信息。<br>G 用于将光标跳转至文件最后一行。<br>先敲入一个行号然后输入大写 G 则是将光标移动至该行号代表的行。<br>gg 用于将光标跳转至文件第一行。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  输入 / 然后紧随一个字符串是在当前所编辑的文档中正向查找该字符串。<br>输入 ? 然后紧随一个字符串则是在当前所编辑的文档中反向查找该字符串。<br>完成一次查找之后按 n 键是重复上一次的命令，可在同一方向上查<br>找下一个匹配字符串所在；或者按大写 N 向相反方向查找下一匹配字符串所在。<br>CTRL-O 带您跳转回较旧的位置，CTRL-I 则带您到较新的位置。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  如果光标当前位置是括号(、)、[、]、{、}，按 % 会将光标移动到配对的括号上。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  在一行内替换头一个字符串 old 为新的字符串 new，请输入  :s/old/new<br>在一行内替换所有的字符串 old 为新的字符串 new，请输入  :s/old/new/g<br>在两行内替换所有的字符串 old 为新的字符串 new，请输入  :#,#s/old/new/g<br>在文件内替换所有的字符串 old 为新的字符串 new，请输入  :%s/old/new/g<br>进行全文替换时询问用户确认每个替换需添加 c 标志        :%s/old/new/gc</p>
+</li>
+</ul>
+<h2 id="第五讲小结"><a href="#第五讲小结" class="headerlink" title="第五讲小结"></a>第五讲小结</h2><ul>
+<li><p><input checked="" disabled="" type="checkbox">  :!command 用于执行一个外部命令 command。</p>
+<p>请看一些实际例子：<br> (MS-DOS)      (Unix)<br>  :!dir           :!ls           -  用于显示当前目录的内容。<br>  :!del FILENAME   :!rm FILENAME   -  用于删除名为 FILENAME 的文件。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  :w FILENAME  可将当前 VIM 中正在编辑的文件保存到名为 FILENAME 的文<br>件中。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  v motion :w FILENAME 可将当前编辑文件中可视模式下选中的内容保存到文件<br>FILENAME 中。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  :r FILENAME 可提取磁盘文件 FILENAME 并将其插入到当前文件的光标位置<br>后面。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  :r !dir 可以读取 dir 命令的输出并将其放置到当前文件的光标位置后面。</p>
+</li>
+</ul>
+<h2 id="第六讲小结"><a href="#第六讲小结" class="headerlink" title="第六讲小结"></a>第六讲小结</h2><ul>
+<li><p><input checked="" disabled="" type="checkbox">  输入小写的 o 可以在光标下方打开新的一行并进入插入模式。<br>输入大写的 O 可以在光标上方打开新的一行。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  输入小写的 a 可以在光标所在位置之后插入文本。<br>输入大写的 A 可以在光标所在行的行末之后插入文本。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  e 命令可以使光标移动到单词末尾。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  操作符 y 复制文本，p 粘贴先前复制的文本。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  输入大写的 R 将进入替换模式，直至按 <ESC> 键回到正常模式。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  输入 :set xxx 可以设置 xxx 选项。一些有用的选项如下：</p>
+<p>‘ic’ ‘ignorecase’    查找时忽略字母大小写<br>‘is’ ‘incsearch’    查找短语时显示部分匹配<br>‘hls’ ‘hlsearch’    高亮显示所有的匹配短语<br> 选项名可以用完整版本，也可以用缩略版本。</p>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  在选项前加上 no 可以关闭选项：  :set noic</p>
+</li>
+</ul>
+<h2 id="第七讲小结"><a href="#第七讲小结" class="headerlink" title="第七讲小结"></a>第七讲小结</h2><ul>
+<li><p><input disabled="" type="checkbox">  输入 :help 或者按 <F1> 键或 <Help> 键可以打开帮助窗口。</p>
+</li>
+<li><p><input disabled="" type="checkbox">  输入 :help cmd 可以找到关于 cmd 命令的帮助。</p>
+</li>
+<li><p><input disabled="" type="checkbox">  输入 CTRL-W CTRL-W  可以使您在窗口之间跳转。</p>
+</li>
+<li><p><input disabled="" type="checkbox">  输入 :q 以关闭帮助窗口</p>
+</li>
+<li><p><input disabled="" type="checkbox">  您可以创建一个 vimrc 启动脚本文件用来保存您偏好的设置。</p>
+</li>
+<li><p><input disabled="" type="checkbox">  当输入 : 命令时，按 CTRL-D 可以查看可能的补全结果。<br>按 <TAB> 可以使用一个补全。</p>
+</li>
+</ul>
+<p>  vim 教程到此就结束了。本教程只是为了简明地介绍一下 Vim 编辑器，但已足以让您很容易使用这个编辑器了。毋庸质疑，vim还有很多很多的命令，本教程所介 绍的距离完整的差得很远。所以您要精通的话，还望继续努力哦。</p>
+<p>下一步您可以阅读Vim 的用户手册，使用的命令是： :help user-manual</p>
+<p>  下面这本书值得推荐用于更进一步的阅读和学习：<br>    Vim - Vi Improved - 作者：Steve Oualline<br>    出版社：New Riders<br>  这是第一本完全讲解 Vim 的书籍。它对于初学者特别有用。其中包含有大量实例<br>  和图示。<br>  欲知详情，请访问 <a target="_blank" rel="noopener" href="http://iccf-holland.org/click5.html">http://iccf-holland.org/click5.html</a></p>
+<p>  以下这本书比较老了而且内容更多是关于 Vi 而非 Vim，但是也值得推荐：<br>    Learning the Vi Editor - 作者：Linda Lamb<br>    出版社：O’Reilly &amp; Associates Inc.<br>  这是一本不错的书，通过它您几乎能够了解到任何您想要使用 Vi 做的事情。<br>  此书的第六个版本也包含了一些关于 Vim 的信息。</p>
+<p>  本教程是由来自 Calorado School of Mines 的 Michael C. Pierce 和<br>  Robert K. Ware 所编写的，其中很多创意由来自 Colorado State University 的<br>  Charles Smith 提供。编者的电子邮箱是：<a href="mailto:&#98;&#119;&#97;&#x72;&#101;&#x40;&#109;&#105;&#x6e;&#101;&#x73;&#46;&#x63;&#111;&#x6c;&#x6f;&#114;&#x61;&#x64;&#x6f;&#46;&#x65;&#100;&#x75;">&#98;&#119;&#97;&#x72;&#101;&#x40;&#109;&#105;&#x6e;&#101;&#x73;&#46;&#x63;&#111;&#x6c;&#x6f;&#114;&#x61;&#x64;&#x6f;&#46;&#x65;&#100;&#x75;</a></p>
+<p>  本教程已由 Bram Moolenaar 专为 Vim 进行修订。</p>
 	
 		</div>
 		
@@ -424,12 +434,12 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" title="Vimtutor 总结" rel="prev">
+			<a href="/2020/12/01/shell-%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80/" title="shell 脚本基础" rel="prev">
 				&laquo;上一篇
 			</a>
 		
 		
-			<a href="/2020/11/25/Blog-%E6%90%AD%E5%BB%BA%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF/" title="Blog 搭建相关技术" rel="next">
+			<a href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -497,24 +507,23 @@ Shell编程就是把一系列命令写在一个文件里面，当有恰当地权
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" title="Vimtutor 总结">
-								Vimtutor 总结			
+							<a class="relate-post-title" href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令">
+								Shell 基本命令			
 							</a>
 							<p class="relate-post-date">
 								<i class="fa fa-calendar"></i>
-								十二月 1日, 2020				
+								十一月 25日, 2020				
 							</p>
 							<p class="relate-post-content">
-								Vim是一款文字编辑器，又被称为编辑器之神，这是来自vimtutor的教程的简单小结。在Linux系统中输入vimtutor即可进入教程。
-第一讲小结
-  光标在屏幕文本中的移动既可以用箭头键，也可以使用 hjkl 字母键。h (左移...
+								基础命令小结bash手册man命令用来访问存储在Linux系统上的手册页面。在想要查找的工具的名称前面输入man命令，就可以找到那个工具相应的手册条目。
+当使用man命令查看命令手册页的时候，这些手册页是由分页程序（pager）来显示...
 							</p>
 						</div>
 
 						<div class="relate-post-cover">
-							<a href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" title="Vimtutor 总结">				
+							<a href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令">				
 								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Vimtutor 总结"/>
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Shell 基本命令"/>
 							</a>
 						</div>
 					</li>												
