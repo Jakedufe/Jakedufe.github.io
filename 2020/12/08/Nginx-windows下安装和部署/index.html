@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      shell 命令2 | Jake&#39;Blog
+      Nginx windows下安装和部署 | Jake&#39;Blog
     
   </title>
   <meta name="author" content="Jake">
@@ -102,7 +102,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「shell 命令2」
+			「Nginx windows下安装和部署」
 		
 	</p>
 
@@ -233,27 +233,14 @@
 		插件作者：KELEN
 		插件来源: https://github.com/KELEN/katelog
 -->
-
-	
-		<div class="layout-toc">
-			<div id="layout-toc">
-				<div class="k-catelog-list" id="catelog-list" data-title="文章目录"></div>
-			</div>
-		</div>
-
-		
-<script src="/plugin/toc/katelog.min.js"></script>
-
-
-		
 	 
 
 <div class="layout-post">
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" itemprop="url">
-		shell 命令2
+	<a href="/2020/12/08/Nginx-windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%83%A8%E7%BD%B2/" itemprop="url">
+		Nginx windows下安装和部署
 	</a>
 
 		</div>
@@ -269,9 +256,9 @@
 
 	更新于
 
-	<a href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" itemprop="url">
-		<time datetime="2020-12-01T06:39:55.000Z" itemprop="dateUpdated">
-	  		2020-12-01
+	<a href="/2020/12/08/Nginx-windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%83%A8%E7%BD%B2/" itemprop="url">
+		<time datetime="2020-12-08T13:43:07.000Z" itemprop="dateUpdated">
+	  		2020-12-08
 	  </time>
 	</a> 
 
@@ -282,8 +269,8 @@
 				
 	<i class="icon-price-tags"></i>
 	
-		<a href="/tags/shell/" class=" ">
-			shell
+		<a href="/tags/Web-%E6%8A%80%E6%9C%AF/" class=" ">
+			Web 技术
 		</a>
 	
 		
@@ -292,7 +279,7 @@
 			
 
 	
-    <span class="leancloud_visitors" id="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/_visitors" data-url="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" data-title="shell 命令2">
+    <span class="leancloud_visitors" id="/2020/12/08/Nginx-windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%83%A8%E7%BD%B2/_visitors" data-url="/2020/12/08/Nginx-windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%83%A8%E7%BD%B2/" data-title="Nginx windows下安装和部署">
        	<i class="icon-eye"></i>
        	热度
         
@@ -304,7 +291,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/_likes" data-url="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" data-title="shell 命令2" rel="unlike">
+    <span class="leancloud_likes" id="/2020/12/08/Nginx-windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%83%A8%E7%BD%B2/_likes" data-url="/2020/12/08/Nginx-windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%83%A8%E7%BD%B2/" data-title="Nginx windows下安装和部署" rel="unlike">
         <i class="icon-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -314,161 +301,30 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-			<p>主要内容总结：</p>
-<p>ps和top命令在判断系统的状态时特别重要，能看到哪些应用在运行以及它们消耗了多少资源。<br>mount命令可以将一个物理存储设备挂载到Linux虚拟目录结构上。umount命令用来移除设备。<br>sort工具能轻松地对大数据文件进行排序，便于组织数据；grep实用工具能快速检索大数据文件来查找特定信息。tar工具能将整个目录都归档到单个文件中，方便把数据迁移到另外一个系统上。</p>
-<h2 id="监测程序"><a href="#监测程序" class="headerlink" title="监测程序"></a>监测程序</h2><h3 id="ps"><a href="#ps" class="headerlink" title="ps"></a>ps</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -ef</span><br></pre></td></tr></table></figure>
+			<p>官网下载 nginx.org，分别有Linux和Windows两个版本，其实官网已经告诉了如何安装，右侧“documentation -&gt; nginx windows”就有详细的说明。</p>
+<p>1、下载完成后，解压缩，运行cmd，使用命令进行操作，不要直接双击nginx.exe，不要直接双击nginx.exe，不要直接双击nginx.exe<br>一定要在dos窗口启动，不要直接双击nginx.exe，这样会导致修改配置后重启、停止nginx无效，需要手动关闭任务管理器内的所有nginx进程，再启动才可以。</p>
+<p>2、使用命令到达nginx的解压缩后的目录</p>
+<p>3、启动nginx服务，启动时会一闪而过是正常的</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">start nginx</span><br></pre></td></tr></table></figure>
 
-<p>-e参数指定显示所有运行在系统上的进程；-f参数则扩展了输<br>出，这些扩展的列包含了有用的信息。</p>
-<blockquote>
-<p>ps命令只会显示运行在当前控制台下的属于当前用户的进<br>程。</p>
-</blockquote>
-<p>结果列表头及意义：</p>
-<ul>
-<li>UID：启动这些进程的用户。</li>
-<li>PID：进程的进程ID。</li>
-<li>PPID：父进程的进程号（如果该进程是由另一个进程启动的）。</li>
-<li>C：进程生命周期中的CPU利用率。</li>
-<li>STIME：进程启动时的系统时间。</li>
-<li>TTY：进程启动时的终端设备。</li>
-<li>TIME：运行进程需要的累计CPU时间。</li>
-<li>CMD：启动的程序名称。</li>
-</ul>
-<p>如果想要获得更多的信息，可采用-l参数，它会产生一个长格式输出。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ps -l</span><br></pre></td></tr></table></figure>
+<p>4、查看任务进程是否存在，dos</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tasklist &#x2F;fi &quot;imagename eq nginx.exe&quot;</span><br></pre></td></tr></table></figure>
 
-<p>注意使用了-l参数之后多出的那些列。</p>
-<ul>
-<li>F：内核分配给进程的系统标记。</li>
-<li>S：进程的状态（O代表正在运行；S代表在休眠；R代表可运行，正等待运行；Z代表僵化，进程已结束但父进程已不存在；T代表停止）。</li>
-<li>PRI：进程的优先级（越大的数字代表越低的优先级）</li>
-<li>NI：谦让度值用来参与决定优先级。</li>
-<li>ADDR：进程的内存地址。</li>
-<li>SZ：假如进程被换出，所需交换空间的大致大小</li>
-<li>WCHAN：进程休眠的内核函数的地址。</li>
-</ul>
-<p>好用的其他命令<code>ps --forest</code></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ps --forest</span><br><span class="line">  PID TTY          TIME CMD</span><br><span class="line">31501 pts/0    00:00:00 bash</span><br><span class="line">31556 pts/0    00:00:00  \_ ps</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>如果都没有可能是启动报错了查看一下日志，在nginx目录中的logs文件夹下error.log是日志文件</p>
+<p>5、修改配置文件，进入解压缩目录，直接文件夹点击进去即可，不需要从dos操作</p>
+<p>修改完成后保存，使用以下命令检查一下配置文件是否正确，后面是nginx.conf文件的路径，successful就说明正确了</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -t -c &#x2F;nginx&#x2F;conf&#x2F;nginx.conf</span><br></pre></td></tr></table></figure>
 
-<h3 id="展示实时情况"><a href="#展示实时情况" class="headerlink" title="展示实时情况"></a>展示实时情况</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">top</span><br></pre></td></tr></table></figure>
+<p>如果程序没启动就直接start nginx启动，如果已经启动了就使用以下命令重新加载配置文件并重启</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s reload</span><br></pre></td></tr></table></figure>
 
-<p>效果：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@f3e059853edc7cedf7ed17a42f22f353c59a55e1/2020/12/01/1de86e84c9b5e98bb5cc05fd5d8b9b71.png" alt="image-20201201145033027"></p>
-<ul>
-<li>PR：进程的优先级。</li>
-<li>NI：进程的谦让度值。</li>
-<li>VIRT：进程占用的虚拟内存总量。</li>
-<li>RES：进程占用的物理内存总量。</li>
-<li>SHR：进程和其他进程共享的内存总量。</li>
-</ul>
-<blockquote>
-<p>键入f允许你选择对输出进行排序的字段，键入d允许你修改轮询间隔。键入q可以退出top。</p>
-</blockquote>
-<h3 id="结束进程"><a href="#结束进程" class="headerlink" title="结束进程"></a>结束进程</h3><p>在Linux中，进程之间通过信号来通信。进程的信号就是预定义好的一个消息，进程能识别它并决定忽略还是作出反应。进程如何处理信号是由开发人员通过编程来决定的。大多数编写完善的程序都能接收和处理标准Unix进程信号。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@c9dedfc1c94595e9993e2a1165fe15feee8e4dbd/2020/12/01/7c7fa9aac6575c249ea5f45bbe63f790.png" alt="image-20201201145410259"></p>
-<p>在Linux上有两个命令可以向运行中的进程发出进程信号。</p>
-<ul>
-<li>kill命令</li>
-<li>killall命令</li>
-</ul>
-<p>kill命令可通过进程ID（PID）给进程发信号。默认情况下，kill命令会向命令行中列出的全部PID发送一个TERM信号。遗憾的是，你只能用进程的PID而不能用命令名，所以kill命令有时并不好用。</p>
-<p>要发送进程信号，你必须是进程的属主或登录为root用户。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill 3940</span><br></pre></td></tr></table></figure>
+<p>6、关闭nginx服务使用以下命令，同样也是一闪而过是正常的，看一下是否进程已消失即可<br>快速停止</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s stop</span><br></pre></td></tr></table></figure>
 
-<p>TERM信号告诉进程可能的话就停止运行。不过，如果有不服管教的进程，那它通常会忽略这个请求。如果要强制终止，-s参数支持指定其他信号（用信号名或信号值）。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kill -s HUP 3940</span><br></pre></td></tr></table></figure>
+<p>完整有序的关闭</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nginx -s quit</span><br></pre></td></tr></table></figure>
 
-<p>killall命令非常强大，它支持通过进程名而不是PID来结束进程。killall命令也支持通配符，这在系统因负载过大而变得很慢时很有用。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">killall http*</span><br></pre></td></tr></table></figure>
-
-<h2 id="监测磁盘空间"><a href="#监测磁盘空间" class="headerlink" title="监测磁盘空间"></a>监测磁盘空间</h2><h3 id="挂载存储媒体"><a href="#挂载存储媒体" class="headerlink" title="挂载存储媒体"></a>挂载存储媒体</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount</span><br></pre></td></tr></table></figure>
-
-<p>mount命令提供如下四部分信息：</p>
-<ul>
-<li>媒体的设备文件名</li>
-<li>媒体挂载到虚拟目录的挂载点</li>
-<li>文件系统类型</li>
-<li>已挂载媒体的访问状态</li>
-</ul>
-<p>要手动在虚拟目录中挂载设备，需要以root用户身份登录，或是以root用户身份运行sudo命令。下面是手动挂载媒体设备的基本命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t type device directory</span><br></pre></td></tr></table></figure>
-
-<p>type参数指定了磁盘被格式化的文件系统类型。比如说，手动将U盘/dev/sdb1挂载到/media/disk</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mount -t vfat /dev/sdb1 /media/disk</span><br></pre></td></tr></table></figure>
-
-<p>媒体设备挂载到了虚拟目录后，root用户就有了对该设备的所有访问权限，而其他用户的访问则会被限制。你可以通过目录权限指定用户对设备的访问权限。</p>
-<p>-o参数允许在挂载文件系统时添加一些以逗号分隔的额外选项。以下为常用的选项。</p>
-<ul>
-<li> ro：以只读形式挂载。</li>
-<li> rw：以读写形式挂载。</li>
-<li> user：允许普通用户挂载文件系统。</li>
-<li> check=none：挂载文件系统时不进行完整性校验。</li>
-<li> loop：挂载一个文件。</li>
-</ul>
-<p>从Linux系统上移除一个可移动设备时，不能直接从系统上移除，而应该先卸载。</p>
-<p>卸载设备的命令是umount（是的，你没看错，命令名中并没有字母n，这一点有时候很让人困惑）。</p>
-<p> 如果在卸载设备时，系统提示设备繁忙，无法卸载设备，通常是有进程还在访问该设备或使用该设备上的文件。这时可用lsof命令获得使用它的进程信息，然后在应用中停止使用该设备或停止该进程。lsof命令的用法很简单：lsof /path/to/device/node，或者lsof /path/to/mount/point。</p>
-<h3 id="df"><a href="#df" class="headerlink" title="df"></a>df</h3><p>df命令会显示每个有数据的已挂载文件系统。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@456e329b4a53da788c027426e76134702e15ad4b/2020/12/01/75d944e34a91cceac1592754b8d8dcaa.png" alt="image-20201201151420923"></p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">df -h</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@c4e1b2efcaa41fad65af8f6a8c667faa3748557c/2020/12/01/125212ff9fe3d14397622ba5dfda6be5.png" alt="image-20201201151535885"></p>
-<h3 id="du"><a href="#du" class="headerlink" title="du"></a>du</h3><p>du命令可以显示某个特定目录（默认情况下是当前目录）的<br>磁盘使用情况。</p>
-<p>下面是能让du命令用起来更方便的几个命令行参数。</p>
-<ul>
-<li>-c：显示所有已列出文件总的大小。</li>
-<li>-h：按用户易读的格式输出大小，即用K替代千字节，用M替代兆字节，用G替代吉字节。</li>
-<li>-s：显示每个输出参数的总计。</li>
-</ul>
-<h2 id="处理数据文件"><a href="#处理数据文件" class="headerlink" title="处理数据文件"></a>处理数据文件</h2><h3 id="排序数据"><a href="#排序数据" class="headerlink" title="排序数据"></a>排序数据</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">sort filename</span><br><span class="line">数字排序</span><br><span class="line">sort -n filname</span><br><span class="line">按月排序</span><br><span class="line">sort -M filename</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@7fa3a99d6f9117fa49268fb7b9ccdcc9faed1333/2020/12/01/4fb493d3489a807ec5d6a5a10fcca36f.png" alt="image-20201201153114482"></p>
-<p>-k和-t参数在对按字段分隔的数据进行排序时非常有用，例如/etc/passwd文件。可以用-t参数来指定字段分隔符，然后用-k参数来指定排序的字段。举个例子，要对前面提到的密码文件/etc/passwd根据用户ID进行数值排序，可以这么做：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sort -t &#x27;:&#x27; -k 3 -n /etc/passwd</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">root:x:0:0:root:/root:/bin/bash</span><br><span class="line">bin:x:1:1:bin:/bin:/sbin/nologin</span><br><span class="line">daemon:x:2:2:daemon:/sbin:/sbin/nologin</span><br><span class="line">adm:x:3:4:adm:/var/adm:/sbin/nologin</span><br><span class="line">lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin</span><br></pre></td></tr></table></figure>
-
-<p>现在数据已经按第三个字段——用户ID的数值排序。</p>
-<p>-n参数在排序数值时非常有用，比如du命令的输出。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">du -sh * | sort -nr</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@3e04e9972f91006bd7d133f805d67ab41a50660e/2020/12/01/1b66df11d3ae60459f58b12bd4322818.png" alt="image-20201201153437566"></p>
-<p>-r参数将结果按降序输出。管道命令（|）将du命令的输出重定向到sort命令。</p>
-<h3 id="搜索数据"><a href="#搜索数据" class="headerlink" title="搜索数据"></a>搜索数据</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">grep [options] pattern [file]</span><br></pre></td></tr></table></figure>
-
-<p>如果要进行反向搜索（输出不匹配该模式的行），可加-v参数。</p>
-<p>如果要显示匹配模式的行所在的行号，可加-n参数。</p>
-<p>如果只要知道有多少行含有匹配的模式，可用-c参数。</p>
-<p>如果要指定多个匹配模式，可用-e参数来指定每个模式。</p>
-<p>默认情况下，grep命令用基本的Unix风格正则表达式来匹配模式。Unix风格正则表达式采用特殊字符来定义怎样查找匹配的模式。</p>
-<h3 id="压缩数据"><a href="#压缩数据" class="headerlink" title="压缩数据"></a>压缩数据</h3><p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@2406d0472ed65cd3649a696296823367f86c7585/2020/12/01/84827d1a33196fbba9259b0c8a35b16d.png" alt="image-20201201153928694"></p>
-<p>gzip软件包是GNU项目的产物，意在编写一个能够替代原先Unix中compress工具的免费版本。这个软件包含有下面的工具。</p>
-<ul>
-<li><p>gzip：用来压缩文件。</p>
-</li>
-<li><p>gzcat：用来查看压缩过的文本文件的内容。</p>
-</li>
-<li><p>gunzip：用来解压文件。</p>
-<p>这些工具基本上跟bzip2工具的用法一样。</p>
-</li>
-</ul>
-<h3 id="归档数据"><a href="#归档数据" class="headerlink" title="归档数据"></a>归档数据</h3><p>tar命令最开始是用来将文件写到磁带设备上归档的，然而它也能把输出写到文件里，这种用法在Linux上已经普遍用来归档数据了。</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar function [options] object1 object2 ...</span><br></pre></td></tr></table></figure>
-
-<p>function参数定义了tar命令应该做什么，如表4-8所示。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@eeb990635f5b225c2cf63a23bcf6407b05d614ae/2020/12/01/a241413afd9e707f1605852c8f1c05de.png" alt="image-20201201154358557"></p>
-<p>每个功能可用选项来针对tar归档文件定义一个特定行为。表4-9列出了这些选项中能和tar命令一起使用的常见选项。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/zjujake/CDN@5d891417c9580085fff4a15111f4ce3839afe519/2020/12/01/4f099337b69ea9cae09426d5de0454f4.png" alt="image-20201201154601465"></p>
-<p>这些选项经常合并到一起使用。首先，你可以用下列命令来创建一个归档文件：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -cvf test.tar test/ test2/</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xvf test.tar</span><br></pre></td></tr></table></figure>
-
-<p>上面的命令创建了名为test.tar的归档文件，含有test和test2目录内容。接着，用下列命令：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -tf test.tar</span><br></pre></td></tr></table></figure>
-
-<p>列出tar文件test.tar的内容（但并不提取文件）。最后，用命令：</p>
-<p>通过这一命令从tar文件test.tar中提取内容。如果tar文件是从一个目录结构创建的，那整个目录结构都会在当前目录下重新创建。</p>
-<p>下载了开源软件之后，你会经常看到文件名以.tgz结尾。这些是gzip压缩过的tar文件可以用命令<code>tar -zxvf filename.tgz</code>来解压。</p>
+<p>参考：<a target="_blank" rel="noopener" href="https://www.cnblogs.com/jiuyi/p/11095268.html">Nginx Windows详细安装部署教程</a></p>
 	
 		</div>
 		
@@ -487,12 +343,8 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2020/12/08/Nginx-windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%83%A8%E7%BD%B2/" title="Nginx windows下安装和部署" rel="prev">
-				&laquo;上一篇
-			</a>
 		
-		
-			<a href="/2020/12/01/shell-%E8%84%9A%E6%9C%AC%E5%9F%BA%E7%A1%80/" title="shell 脚本基础" rel="next">
+			<a href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" title="shell 命令2" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -510,6 +362,29 @@
 <div class="relate-post">
 	
 		<ul>
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" title="shell 命令2">
+								shell 命令2			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十二月 1日, 2020				
+							</p>
+							<p class="relate-post-content">
+								主要内容总结：
+ps和top命令在判断系统的状态时特别重要，能看到哪些应用在运行以及它们消耗了多少资源。mount命令可以将一个物理存储设备挂载到Linux虚拟目录结构上。umount命令用来移除设备。sort工具能轻松地对大数据文件...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/12/01/shell-%E5%91%BD%E4%BB%A42/" title="shell 命令2">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="shell 命令2"/>
+							</a>
+						</div>
+					</li>												
 			
 					<li>
 						<div class="relate-post-text">
@@ -537,52 +412,6 @@ Shell编程就是把一系列命令写在一个文件里面，当有恰当地权
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令">
-								Shell 基本命令			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十一月 25日, 2020				
-							</p>
-							<p class="relate-post-content">
-								基础命令小结bash手册man命令用来访问存储在Linux系统上的手册页面。在想要查找的工具的名称前面输入man命令，就可以找到那个工具相应的手册条目。
-当使用man命令查看命令手册页的时候，这些手册页是由分页程序（pager）来显示...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Shell 基本命令"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2020/12/08/Nginx-windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%83%A8%E7%BD%B2/" title="Nginx windows下安装和部署">
-								Nginx windows下安装和部署			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十二月 8日, 2020				
-							</p>
-							<p class="relate-post-content">
-								官网下载 nginx.org，分别有Linux和Windows两个版本，其实官网已经告诉了如何安装，右侧“documentation -&gt; nginx windows”就有详细的说明。
-1、下载完成后，解压缩，运行cmd，使用命...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2020/12/08/Nginx-windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%83%A8%E7%BD%B2/" title="Nginx windows下安装和部署">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Nginx windows下安装和部署"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" title="Vimtutor 总结">
 								Vimtutor 总结			
 							</a>
@@ -601,6 +430,29 @@ Shell编程就是把一系列命令写在一个文件里面，当有恰当地权
 							<a href="/2020/12/01/Vimtutor-%E6%80%BB%E7%BB%93/" title="Vimtutor 总结">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Vimtutor 总结"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令">
+								Shell 基本命令			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十一月 25日, 2020				
+							</p>
+							<p class="relate-post-content">
+								基础命令小结bash手册man命令用来访问存储在Linux系统上的手册页面。在想要查找的工具的名称前面输入man命令，就可以找到那个工具相应的手册条目。
+当使用man命令查看命令手册页的时候，这些手册页是由分页程序（pager）来显示...
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/11/25/Shell-%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4/" title="Shell 基本命令">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Shell 基本命令"/>
 							</a>
 						</div>
 					</li>												
