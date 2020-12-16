@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
   <title>
     
-      Win10安装gcc、g++、make | Jake&#39;Blog
+      Centos 下RabbitMQ 的安装与使用 | Jake&#39;Blog
     
   </title>
   <meta name="author" content="Jake">
@@ -102,7 +102,7 @@
 	<!-- Page title -->
 	<p>
 		
-			「Win10安装gcc、g++、make」
+			「Centos 下RabbitMQ 的安装与使用」
 		
 	</p>
 
@@ -239,8 +239,8 @@
 	<div id="layout-post">
 		<div class="article-title">
 			
-	<a href="/2020/12/09/Win10%E5%AE%89%E8%A3%85gcc%E3%80%81g-%E3%80%81make/" itemprop="url">
-		Win10安装gcc、g++、make
+	<a href="/2020/12/16/Centos-%E4%B8%8BRabbitMQ-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" itemprop="url">
+		Centos 下RabbitMQ 的安装与使用
 	</a>
 
 		</div>
@@ -256,9 +256,9 @@
 
 	更新于
 
-	<a href="/2020/12/09/Win10%E5%AE%89%E8%A3%85gcc%E3%80%81g-%E3%80%81make/" itemprop="url">
-		<time datetime="2020-12-09T13:41:09.000Z" itemprop="dateUpdated">
-	  		2020-12-09
+	<a href="/2020/12/16/Centos-%E4%B8%8BRabbitMQ-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" itemprop="url">
+		<time datetime="2020-12-16T09:51:20.000Z" itemprop="dateUpdated">
+	  		2020-12-16
 	  </time>
 	</a> 
 
@@ -266,13 +266,24 @@
 
 			</span>
 			<span>
-						
+				
+	<i class="icon-price-tags"></i>
+	
+		<a href="/tags/web/" class=" ">
+			web
+		</a>
+	
+		<a href="/tags/%E8%BD%AC%E8%BD%BD/" class=" ">
+			转载
+		</a>
+	
+		
 			</span>
 			
 			
 
 	
-    <span class="leancloud_visitors" id="/2020/12/09/Win10%E5%AE%89%E8%A3%85gcc%E3%80%81g-%E3%80%81make/_visitors" data-url="/2020/12/09/Win10%E5%AE%89%E8%A3%85gcc%E3%80%81g-%E3%80%81make/" data-title="Win10安装gcc、g++、make">
+    <span class="leancloud_visitors" id="/2020/12/16/Centos-%E4%B8%8BRabbitMQ-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/_visitors" data-url="/2020/12/16/Centos-%E4%B8%8BRabbitMQ-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-title="Centos 下RabbitMQ 的安装与使用">
        	<i class="icon-eye"></i>
        	热度
         
@@ -284,7 +295,7 @@
 
 
 	
-    <span class="leancloud_likes" id="/2020/12/09/Win10%E5%AE%89%E8%A3%85gcc%E3%80%81g-%E3%80%81make/_likes" data-url="/2020/12/09/Win10%E5%AE%89%E8%A3%85gcc%E3%80%81g-%E3%80%81make/" data-title="Win10安装gcc、g++、make" rel="unlike">
+    <span class="leancloud_likes" id="/2020/12/16/Centos-%E4%B8%8BRabbitMQ-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/_likes" data-url="/2020/12/16/Centos-%E4%B8%8BRabbitMQ-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" data-title="Centos 下RabbitMQ 的安装与使用" rel="unlike">
         <i class="icon-heart"></i>
         喜欢
         <i class="leancloud_likes_count" id="leancloud_likes_count">0</i>
@@ -294,7 +305,54 @@
 		</div>
 
 		<div class="article-content" id="article-content">
-				
+			<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/LiuFqiang/p/13791026.html">Centos安装RabbitMQ</a></p>
+<p>一、安装Erlang</p>
+<p>RabbitMQ由Erlang语言编写而写，所以在安装RabbitMQ之前先安装Erlang</p>
+<p>erlang在默认的yum存储库中不可用，所以先安装epel存储库，命令如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install epel-release</span><br></pre></td></tr></table></figure>
+
+<p>安装erlang </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install erlang socat</span><br></pre></td></tr></table></figure>
+
+<p>安装erlang完成，查看版本</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">erl -version</span><br></pre></td></tr></table></figure>
+
+<p>二、安装RabbitMQ</p>
+<p>运行下载安装npm包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https:&#x2F;&#x2F;www.rabbitmq.com&#x2F;releases&#x2F;rabbitmq-server&#x2F;v3.6.10&#x2F;rabbitmq-server-3.6.10-1.el7.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>通过运行导入GPG密钥</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm –import https:&#x2F;&#x2F;www.rabbitmq.com&#x2F;rabbitmq-release-signing-key.asc</span><br></pre></td></tr></table></figure>
+
+<p>运行rpm包</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rpm -Uvh rabbitmq-server-3.6.10-1.el7.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p>安装完成，启动RabbitMQ</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start rabbitmq-server</span><br></pre></td></tr></table></figure>
+
+<p>设置开启自启动</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl enable rabbitmq-server</span><br></pre></td></tr></table></figure>
+
+<p>查看RabbitMQ运行启动状态</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status rabbitmq-server</span><br></pre></td></tr></table></figure>
+
+<p>启用管理后台</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmq-plugins enable rabbitmq_management</span><br></pre></td></tr></table></figure>
+
+<p>配置权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chown -R rabbitmq:rabbitmq &#x2F;&#96;&#96;var&#96;&#96;&#x2F;lib&#x2F;rabbitmq&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>增加用户</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmqctl add_user admin admin</span><br></pre></td></tr></table></figure>
+
+<p>设置角色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmqctl set_user_tags admin administrator</span><br></pre></td></tr></table></figure>
+
+<p>设置用户权限</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rabbitmqctl set_permissions -p &#x2F; admin &#96;&#96;&#39;.*&#39;&#96; &#96;&#39;.*&#39;&#96; &#96;&#39;.*&#39;</span><br></pre></td></tr></table></figure>
+
+<p>最后设置防火墙端口号5672和15672或者关闭防火墙，登录web端可以看到rabbitmq登录页面</p>
+	
 		</div>
 		
 		<div id="current-post-cover" data-scr="/img/cart_cover.jpg"></div>
@@ -312,12 +370,12 @@
 	<span>
 		<a id="totop-post-page">返回顶部</a>
 		
-			<a href="/2020/12/15/cnpm%E5%91%BD%E4%BB%A4%E5%90%8E%E6%97%A0%E5%93%8D%E5%BA%94/" title="cnpm命令后无响应" rel="prev">
+			<a href="/2020/12/16/Springboot-%E6%95%B4%E5%90%88RabbitMq/" title="Springboot 整合RabbitMq" rel="prev">
 				&laquo;上一篇
 			</a>
 		
 		
-			<a href="/2020/12/08/Nginx-windows%E4%B8%8B%E5%AE%89%E8%A3%85%E5%92%8C%E9%83%A8%E7%BD%B2/" title="Nginx windows下安装和部署" rel="next">
+			<a href="/2020/12/15/cnpm%E5%91%BD%E4%BB%A4%E5%90%8E%E6%97%A0%E5%93%8D%E5%BA%94/" title="cnpm命令后无响应" rel="next">
 				下一篇&raquo;
 			</a>
 			
@@ -361,32 +419,6 @@
 			
 					<li>
 						<div class="relate-post-text">
-							<a class="relate-post-title" href="/2020/12/16/Centos-%E4%B8%8BRabbitMQ-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="Centos 下RabbitMQ 的安装与使用">
-								Centos 下RabbitMQ 的安装与使用			
-							</a>
-							<p class="relate-post-date">
-								<i class="fa fa-calendar"></i>
-								十二月 16日, 2020				
-							</p>
-							<p class="relate-post-content">
-								Centos安装RabbitMQ
-一、安装Erlang
-RabbitMQ由Erlang语言编写而写，所以在安装RabbitMQ之前先安装Erlang
-erlang在默认的yum存储库中不可用，所以先安装epel存储库，命令如下：
-1y...
-							</p>
-						</div>
-
-						<div class="relate-post-cover">
-							<a href="/2020/12/16/Centos-%E4%B8%8BRabbitMQ-%E7%9A%84%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" title="Centos 下RabbitMQ 的安装与使用">				
-								
-								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Centos 下RabbitMQ 的安装与使用"/>
-							</a>
-						</div>
-					</li>												
-			
-					<li>
-						<div class="relate-post-text">
 							<a class="relate-post-title" href="/2020/12/15/cnpm%E5%91%BD%E4%BB%A4%E5%90%8E%E6%97%A0%E5%93%8D%E5%BA%94/" title="cnpm命令后无响应">
 								cnpm命令后无响应			
 							</a>
@@ -408,6 +440,28 @@ erlang在默认的yum存储库中不可用，所以先安装epel存储库，命�
 							<a href="/2020/12/15/cnpm%E5%91%BD%E4%BB%A4%E5%90%8E%E6%97%A0%E5%93%8D%E5%BA%94/" title="cnpm命令后无响应">				
 								
 								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="cnpm命令后无响应"/>
+							</a>
+						</div>
+					</li>												
+			
+					<li>
+						<div class="relate-post-text">
+							<a class="relate-post-title" href="/2020/12/09/Win10%E5%AE%89%E8%A3%85gcc%E3%80%81g-%E3%80%81make/" title="Win10安装gcc、g++、make">
+								Win10安装gcc、g++、make			
+							</a>
+							<p class="relate-post-date">
+								<i class="fa fa-calendar"></i>
+								十二月 9日, 2020				
+							</p>
+							<p class="relate-post-content">
+								
+							</p>
+						</div>
+
+						<div class="relate-post-cover">
+							<a href="/2020/12/09/Win10%E5%AE%89%E8%A3%85gcc%E3%80%81g-%E3%80%81make/" title="Win10安装gcc、g++、make">				
+								
+								<img class="lazy" src="/img/lazy.gif" data-src="/img/cart_cover.jpg" alt="Win10安装gcc、g++、make"/>
 							</a>
 						</div>
 					</li>												
